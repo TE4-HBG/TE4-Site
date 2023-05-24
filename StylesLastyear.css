@@ -1047,13 +1047,16 @@
     }
     .backToHomePage {
         border: none;
-        background-color: #f50000;
-        font-size: 40px;
+        background-color: #9d2477;
+        font-size: 50px;
         margin: 30px 30px 30px 30px;
-        right: 1%;
+        left: -10px;
         border-radius: 100px;
         position: fixed;
         z-index: 9999;
+        top: 35px;
+        width: 55px;
+        height: 55px;
     }
     /* Place the timelime to the left */
     .timeline::after {
@@ -1062,7 +1065,7 @@
   
     /* Full-width containers */
     .container {
-        width: 100%;
+        width: 98%;
         padding-left: 42px;
         padding-right: 25px;
     }
