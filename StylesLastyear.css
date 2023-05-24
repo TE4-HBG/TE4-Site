@@ -963,8 +963,8 @@
   .container::after {
     content: "";
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     right: -12px;
     background-color: #9262b2b4;
     border: 4px solid #8d0763af;
@@ -1025,9 +1025,36 @@
     border-radius: 6px;
     box-shadow: -10px 5px 0.5px #8d0763af;
   }
+  .backToHomePage {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    margin: 20px 0px 0px 30px;
+    float: left;
+  }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
+    .timeline-page::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        margin-left: -3px;
+    }
+    .backToHomePage {
+        border: none;
+        background-color: #f50000;
+        font-size: 40px;
+        margin: 30px 30px 30px 30px;
+        right: 1%;
+        border-radius: 100px;
+        position: fixed;
+        z-index: 9999;
+    }
     /* Place the timelime to the left */
     .timeline::after {
       left: 31px;
@@ -1035,14 +1062,14 @@
   
     /* Full-width containers */
     .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
+        width: 100%;
+        padding-left: 42px;
+        padding-right: 25px;
     }
   
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
-      left: 60px;
+      left: 32px;
       border: medium solid white;
       border-width: 10px 10px 10px 0;
       border-color: transparent white transparent transparent;
@@ -1051,7 +1078,7 @@
     /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
-      left: 15px;
+      left: 0.5px;
     }
   
     /* Make all right containers behave like the left ones */
@@ -1059,11 +1086,5 @@
       left: 0%;
     }
   }
-  .backToHomePage {
-    border: none;
-    background-color: transparent;
-    font-size: 40px;
-    margin: 20px 0px 0px 30px;
-    float: left;
-  }
+  
   
