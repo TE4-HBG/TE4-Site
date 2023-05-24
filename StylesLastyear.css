@@ -23,6 +23,8 @@
     /* background: var(--color-body); */
     background: #fff;
     /* color: var(--color-secondary); */
+    margin: 0;
+    padding: 0;
   }
   
   h1 {
@@ -1019,7 +1021,7 @@
   
   /* The actual content */
   .content {
-    padding: 20px 30px;
+    padding: 20px 13px 20px 23px;
     background-color: white;
     position: relative;
     border-radius: 6px;
@@ -1034,7 +1036,7 @@
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .timeline-page::after {
         content: "";
         position: absolute;
@@ -1050,13 +1052,20 @@
         background-color: #9d2477;
         font-size: 50px;
         margin: 30px 30px 30px 30px;
-        left: -10px;
+        left: -20px;
         border-radius: 100px;
         position: fixed;
         z-index: 9999;
         top: 35px;
         width: 55px;
         height: 55px;
+    }
+    .backToHomePage span {
+      top: 25px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      color: white!important;
+      left: 49%!important;
     }
     /* Place the timelime to the left */
     .timeline::after {
@@ -1065,7 +1074,7 @@
   
     /* Full-width containers */
     .container {
-        width: 98%;
+        width: 102%;
         padding-left: 42px;
         padding-right: 25px;
     }
