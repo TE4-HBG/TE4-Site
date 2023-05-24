@@ -1,58 +1,72 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  clear: both;
+  height: 100vh;
+  background-image: url("images/te4-working.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.header-info {
+  width: 50%;
+  margin: auto;
+}
+
 .container {
-    width: 70%;
-    margin: auto;
+  width: 70%;
+  margin: auto;
 }
 
 .navbar {
-    height: 4em;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: inherit;
-    top: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: rgba(255, 0, 0, 0);
-    transition: background-color 0.2s ease-in-out;
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgba(255, 0, 0, 0);
+  transition: background-color 0.2s ease-in-out;
 }
 
 html:not([data-scroll="0"]) .navbar {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .navbar-link-div {
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
 }
 
 .navbar-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .linkedIn-logo {
-    display: flex;
-    align-items: center;
-    height: 60%;
+  display: flex;
+  align-items: center;
+  height: 60%;
 }
 
-
-
-
-
-
-
-
-
 .inherit-height {
-    height: inherit;
+  height: inherit;
 }
 
 .center-y-axis {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
