@@ -10,12 +10,13 @@ body {
 
 #hero {
   padding-top: 16em;;
-  height: 100vh;
+  height: 82vh;
   width: 100%;
 /*  display: flex;
   justify-content: center;
   align-items: center;*/
   background-image: url("images/te4-working.png");
+  background-position: center top;
 }
 
 #hero div {
@@ -24,11 +25,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
+  font-size: 3.5vw;
   color: white;
 }
 #hero img {
-  height: inherit;
+  width: 9vw;
+  min-width: 80px;
   margin-right: 2%;
 }
 
