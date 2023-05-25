@@ -8,7 +8,55 @@ body {
   font-family: Poppins, sans-serif;
 }
 
+#hero {
+  padding-top: 16em;;
+  height: 100vh;
+  width: 100%;
+/*  display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background-image: url("images/te4-working.png");
+}
 
+#hero div {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: white;
+}
+#hero img {
+  height: inherit;
+  margin-right: 2%;
+}
+
+.hr {
+  width: 100%;
+  height: 2px!important;
+  background-image: linear-gradient(90deg,#ab058b 0,indigo 100%);
+  margin: auto;
+  margin-top: 1em;
+}
+
+#main-container {
+  width: 100%;
+}
+
+.container-width {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.center {
+    margin: 0px auto 0px auto;
+}
+
+
+
+/*navbar*/
 .navbar {
   height: 4em;
   display: flex;
@@ -34,20 +82,30 @@ html:not([data-scroll="0"]) .navbar {
 
 .navbar-link {
   text-decoration: none;
+  color: black;
+  border-bottom: 2px transparent solid; 
+  transition: 0.2s;
+  font-size: 1.2em;
 }
 
 .navbar-link:hover {
-  text-decoration: underline;
+  border-bottom: 2px black solid; ;
 }
 
 .linkedIn-logo {
   display: flex;
   align-items: center;
-  height: 60%;
+  height: 70%;
+  filter: grayscale(1) contrast(2.8);
+  transition: 100ms;
+}
+.linkedIn-logo:hover {
+  filter: grayscale(0) contrast(1);  
 }
 
 .inherit-height {
   height: inherit;
+  margin-right: -7%;
 }
 
 .center-y-axis {
