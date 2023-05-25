@@ -16,8 +16,24 @@ body {
 }
 
 .header-info {
-  width: 50%;
+  width: 70%;
   margin: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+}
+
+#headerlogo {
+  width: 18%;
+  margin-right: 20px;
+}
+
+.header-text {
+  margin: auto;
+  font-size: 65px;
 }
 
 .container {
