@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #f6f6f6;
 }
 
 * {
@@ -33,13 +34,18 @@ body {
   min-width: 80px;
   margin-right: 2%;
 }
+.header-text {
+  font-size: 1em;
+}
+
 
 .hr {
+  border-radius: 100px;
   width: 100%;
   height: 2px!important;
   background-image: linear-gradient(90deg,#ab058b 0,indigo 100%);
   margin: auto;
-  margin-top: 1em;
+  
 }
 
 #main-container {
@@ -47,24 +53,78 @@ body {
 }
 
 .container-width {
-  width: 70%;
+  width: 80%;
   display: flex;
   align-items: center;
   margin: auto;
 }
 .center {
     margin: 0px auto 0px auto;
+    text-align: center;
 }
 
 
 h2 {
-  font-size: 3vw;
+  font-size: 3vh;
+}
+#Projekt {
   text-decoration: underline;
+}
+#projeks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.projekt {
+  width: 12em;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+  margin: 25px;
+  border-radius: 1rem;
+  border: 3px transparent solid; /*this is spacing*/
+  outline: 0px solid transparent;
+  transition: 100ms;
+  box-shadow: 0px 0px 10px rgb(200, 200, 200);
+}
+.projekt:hover {
+  border: 3px transparent solid;
+  outline: 4px solid #4b0082;
+}
+
+.projekt h3 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+  color: white;
+  font-size: 1.5rem;
+  width: 80%;
+  text-align: center;
+  text-shadow: 0px 2px 15px black;
+}
+.projekt img {
+  width: 103%;
+  height: 102%;
+  z-index: 4;
+  filter: blur(3px);
+  transform: translate(-50%,-50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transition: 200ms;
+}
+.projekt img:hover {
+  filter: none;
 }
 
 
 /*navbar*/
 .navbar {
+  z-index: 9999;
   height: 4em;
   display: flex;
   justify-content: space-around;
@@ -73,12 +133,14 @@ h2 {
   top: 0;
   padding-top: 1em;
   padding-bottom: 1em;
-  background-color: rgba(255, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
   transition: background-color 0.2s ease-in-out;
 }
 
 html:not([data-scroll="0"]) .navbar {
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
 }
 
 .navbar-link-div {
@@ -118,4 +180,12 @@ html:not([data-scroll="0"]) .navbar {
 .center-y-axis {
   display: flex;
   align-items: center;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .container-width {
+    width: 95%;
+  }
 }
