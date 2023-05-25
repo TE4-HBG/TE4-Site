@@ -4,47 +4,15 @@ body {
   padding: 0;
 }
 
-.header {
-  clear: both;
-  height: 100vh;
-  background-image: url("images/te4-working.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
+* {
+  font-family: Poppins, sans-serif;
 }
 
-.header-info {
-  width: 70%;
-  margin: auto;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  margin-top: 200px;
-}
-
-#headerlogo {
-  width: 18%;
-  margin-right: 20px;
-}
-
-.header-text {
-  margin: auto;
-  font-size: 65px;
-}
-
-.container {
-  width: 70%;
-  margin: auto;
-}
 
 .navbar {
   height: 4em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   width: 100%;
   top: 0;
