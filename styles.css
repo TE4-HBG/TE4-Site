@@ -87,6 +87,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  padding-bottom: 2em;
 }
 
 .projekt {
@@ -117,6 +118,7 @@ h2 {
   width: 80%;
   text-align: center;
   text-shadow: 0px 2px 15px black;
+  user-select: none;
 }
 .projekt img {
   width: 103%;
@@ -149,7 +151,7 @@ h2 {
   box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
   width: 50%;
   margin: auto;
-  background-color: var(--bg-ac);
+  background-color: white;
   padding: 1em 2em 1em 2em;
   position: relative;
 }
