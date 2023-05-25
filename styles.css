@@ -141,7 +141,8 @@ h2 {
 }
 #about {
   background: url(images/te4-outside.png);
-
+  background-position: center center;
+  padding-bottom: 2em;
 }
 #about-box {
   border-radius: 0.5em;
