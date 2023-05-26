@@ -11,17 +11,15 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
 * {
   font-family: Poppins, sans-serif;
 }
 
 #hero {
-  padding-top: 16em;;
+  padding-top: 16em;
   height: 85vh;
   width: 100%;
-/*  display: flex;
+  /*  display: flex;
   justify-content: center;
   align-items: center;*/
   background-image: url("images/te4-working.png");
@@ -46,14 +44,12 @@ body {
   font-size: 1em;
 }
 
-
 .hr {
   border-radius: 100px;
   width: 100%;
-  height: 2px!important;
+  height: 2px !important;
   background-color: var(--bg-ac);
   margin: auto;
-  
 }
 
 #main-container {
@@ -66,17 +62,13 @@ body {
   margin: auto;
 }
 .center {
-    margin: 0px auto 0px auto;
-    text-align: center;
+  margin: 0px auto 0px auto;
+  text-align: center;
 }
-
 
 h2 {
   font-size: 3vh;
 }
-
-
-
 
 /*projekt section-------*/
 #Projekt {
@@ -111,7 +103,7 @@ h2 {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 5;
   color: white;
   font-size: 1.5rem;
@@ -125,7 +117,7 @@ h2 {
   height: 102%;
   z-index: 4;
   filter: blur(3px);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: relative;
   top: 50%;
   left: 50%;
@@ -148,7 +140,7 @@ h2 {
 }
 #about-box {
   border-radius: 0.5em;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   width: 50%;
   margin: auto;
   background-color: white;
@@ -179,7 +171,6 @@ h2 {
 html:not([data-scroll="0"]) .navbar {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-
 }
 
 .navbar-link-div {
@@ -191,13 +182,13 @@ html:not([data-scroll="0"]) .navbar {
 .navbar-link {
   text-decoration: none;
   color: black;
-  border-bottom: 2px transparent solid; 
+  border-bottom: 2px transparent solid;
   transition: 0.2s;
   font-size: 1.2em;
 }
 
 .navbar-link:hover {
-  border-bottom: 2px black solid; ;
+  border-bottom: 2px black solid;
 }
 
 .linkedIn-logo {
@@ -208,7 +199,7 @@ html:not([data-scroll="0"]) .navbar {
   transition: 100ms;
 }
 .linkedIn-logo:hover {
-  filter: grayscale(0) contrast(1);  
+  filter: grayscale(0) contrast(1);
 }
 
 .inherit-height {
@@ -224,7 +215,6 @@ html:not([data-scroll="0"]) .navbar {
 /*modal------*/
 /* The Modal (background) */
 .modal {
-
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 5; /* Sit on top */
@@ -234,8 +224,8 @@ html:not([data-scroll="0"]) .navbar {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -247,7 +237,7 @@ html:not([data-scroll="0"]) .navbar {
   margin: auto;
   padding: 0;
   width: 30%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -257,13 +247,21 @@ html:not([data-scroll="0"]) .navbar {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {opacity:0} 
-  to {opacity:1}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {
-  from {opacity:0}
-  to {opacity:1}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* The Close Button */
@@ -274,9 +272,7 @@ html:not([data-scroll="0"]) .navbar {
   font-weight: bold;
   background: none;
   border: transparent;
-  
 }
-
 
 .close:hover,
 .close:focus {
@@ -289,7 +285,7 @@ html:not([data-scroll="0"]) .navbar {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   padding: 2px 16px;
-  background-image: linear-gradient(90deg,#ab058b 0,indigo 100%);
+  background-image: linear-gradient(90deg, #ab058b 0, indigo 100%);
   color: white;
 }
 
@@ -300,7 +296,6 @@ html:not([data-scroll="0"]) .navbar {
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
 }
-
 
 /*media queries------------*/
 @media only screen and (max-width: 600px) {
