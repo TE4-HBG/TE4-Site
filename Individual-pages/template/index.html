@@ -34,7 +34,6 @@
         padding: 1rem;
         margin: 4rem 3rem;
 
-        
         border-radius: 1rem;
       }
       .body h1 {
@@ -85,19 +84,71 @@
         margin-bottom: 0.5rem;
       }
       .project-container {
+        margin-top: 1rem;
         display: flex;
         justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
       }
-      .project-container > * {
-        padding: 2rem;
-        width: calc(100%/4);
+
+      .project-container > div {
+        width: calc((100% / 3) - 2rem);
+        aspect-ratio: 4/3;
         color: white;
         background-color: rgb(59, 36, 74);
         border-radius: 1.5rem;
+
+        display: grid;
+        grid-auto-columns: 1fr;
+        gap: 0;
       }
-      .project-container > * ul > li::marker {
-        padding: 0.125rem;
+      .project-container > div > div {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .project-container > div > div > ul {
+        padding: 0;
+      }
+      .project-container > div > div > ul > li::marker {
+        padding: 0rem;
         margin: 0;
+      }
+      .project-container > div > .project-game {
+        margin: 0;
+        background-image: url("../../images/spel.jpg");
+
+        background-size: cover;
+        filter: blur(0.2rem) brightness(0.75);
+        z-index: 1;
+        border-radius: 1.5rem;
+        transition-duration: 0.1s;
+      }
+
+      .project-container > div:hover > .project-game {
+        filter: blur(0.1rem) brightness(0.9);
+        transition-duration: 0.1s;
+      }
+      .project-container > div > div > a {
+        color: white;
+        text-decoration: none;
+        transition-duration: 0.1s;
+
+      }
+
+      .project-container > div:hover > div > a {
+        color: rgb(176, 255, 239);
+        transition-duration: 0.1s;
+      }
+      .project-container > div > div > a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -127,13 +178,64 @@
         <h1>Mina projekt-bidrag:</h1>
         <div class="project-container">
           <div>
-            <h3>Rat on the Ru 2 2 n</h3>
-            <ul>
-              <li>Kodning</li>
-              <li>Grafik</li>
-              <li>Musik</li>
-              <li>Allt</li>
-            </ul>
+            <div>
+              <a href="../../index.html"><h2>Rat on the Run</h2></a>
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <li><h3>Grafik</h3></li>
+                <li><h3>Musik</h3></li>
+                <li><h3>Allt</h3></li>
+              </ul>
+            </div>
+            <div class="project-game"></div>
+          </div>
+          <div>
+            <div>
+              <a href="../../index.html"><h2>Rat on the Run</h2></a>
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <li><h3>Grafik</h3></li>
+                <li><h3>Musik</h3></li>
+                <li><h3>Allt</h3></li>
+              </ul>
+            </div>
+            <div class="project-game"></div>
+          </div>
+          <div>
+            <div>
+              <a href="../../index.html"><h2>Rat on the Run</h2></a>
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <li><h3>Grafik</h3></li>
+                <li><h3>Musik</h3></li>
+                <li><h3>Allt</h3></li>
+              </ul>
+            </div>
+            <div class="project-game"></div>
+          </div>
+          <div>
+            <div>
+              <a href="../../index.html"><h2>Rat on the Run</h2></a>
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <li><h3>Grafik</h3></li>
+                <li><h3>Musik</h3></li>
+                <li><h3>Allt</h3></li>
+              </ul>
+            </div>
+            <div class="project-game"></div>
+          </div>
+          <div>
+            <div>
+              <a href="../../index.html"><h2>Rat on the Run</h2></a>
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <li><h3>Grafik</h3></li>
+                <li><h3>Musik</h3></li>
+                <li><h3>Allt</h3></li>
+              </ul>
+            </div>
+            <div class="project-game"></div>
           </div>
         </div>
       </div>
