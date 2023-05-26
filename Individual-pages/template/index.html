@@ -17,6 +17,14 @@
         background-image: url("../../images/te4-outside.png");
         background-position: center;
         background-size: cover;
+        z-index: -2;
+      }
+      .blurrer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(0.5rem);
+        z-index: -1;
       }
       .body-container {
         height: 100%;
@@ -58,7 +66,7 @@
         margin: auto;
       }
       .portrait {
-        height: 60%;
+        height: 65%;
         aspect-ratio: 1/1;
         background-image: var(--portrait);
         background-position: center;
@@ -93,7 +101,7 @@
 
       .project-container > div {
         width: calc((100% / 3) - 2rem);
-        aspect-ratio: 4/3;
+        aspect-ratio: 6/5;
         color: white;
         background-color: rgb(59, 36, 74);
         border-radius: 1.5rem;
@@ -103,10 +111,12 @@
         gap: 0;
       }
       .project-container > div > div {
+        padding: 1rem;
+        box-sizing: border-box;
         grid-column: 1;
         grid-row: 1;
         text-align: center;
-        z-index: 2;
+        z-index: 3;
         width: 100%;
         height: 100%;
         display: flex;
@@ -121,26 +131,28 @@
         padding: 0rem;
         margin: 0;
       }
-      .project-container > div > .project-game {
-        margin: 0;
-        background-image: url("../../images/spel.jpg");
-
-        background-size: cover;
-        filter: blur(0.2rem) brightness(0.75);
-        z-index: 1;
+      .project-container > div > .blurrer {
+        backdrop-filter: blur(0.2rem) brightness(0.7);
+        position: relative;
+        z-index: 2;
         border-radius: 1.5rem;
+      }
+      .project-container > div:hover > .blurrer {
+        backdrop-filter: blur(0.15rem) brightness(0.9);
         transition-duration: 0.1s;
       }
-
-      .project-container > div:hover > .project-game {
-        filter: blur(0.1rem) brightness(0.9);
-        transition-duration: 0.1s;
+      .project-background {
+        background-size: cover;
+        z-index: 2 !important;
+        border-radius: 1.5rem;
+      }
+      .project-background.game {
+        background-image: url("../../images/spel.jpg");
       }
       .project-container > div > div > a {
         color: white;
         text-decoration: none;
-        transition-duration: 0.1s;
-
+        transition-duration: 0.2s;
       }
 
       .project-container > div:hover > div > a {
@@ -153,6 +165,7 @@
     </style>
   </head>
   <body class="background">
+    <div class="blurrer"></div>
     <div class="body-container">
       <div class="body">
         <h1>Namn Namnsson</h1>
@@ -187,7 +200,8 @@
                 <li><h3>Allt</h3></li>
               </ul>
             </div>
-            <div class="project-game"></div>
+            <div class="project-background game"></div>
+            <div class="blurrer"></div>
           </div>
           <div>
             <div>
@@ -199,7 +213,8 @@
                 <li><h3>Allt</h3></li>
               </ul>
             </div>
-            <div class="project-game"></div>
+            <div class="project-background game"></div>
+            <div class="blurrer"></div>
           </div>
           <div>
             <div>
@@ -211,7 +226,8 @@
                 <li><h3>Allt</h3></li>
               </ul>
             </div>
-            <div class="project-game"></div>
+            <div class="project-background game"></div>
+            <div class="blurrer"></div>
           </div>
           <div>
             <div>
@@ -223,7 +239,8 @@
                 <li><h3>Allt</h3></li>
               </ul>
             </div>
-            <div class="project-game"></div>
+            <div class="project-background game"></div>
+            <div class="blurrer"></div>
           </div>
           <div>
             <div>
@@ -235,7 +252,8 @@
                 <li><h3>Allt</h3></li>
               </ul>
             </div>
-            <div class="project-game"></div>
+            <div class="project-background game"></div>
+            <div class="blurrer"></div>
           </div>
         </div>
       </div>
