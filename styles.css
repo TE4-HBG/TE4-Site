@@ -242,7 +242,7 @@ html:not([data-scroll="0"]) .navbar {
 .modal-content {
   border-radius: 10px;
   position: relative;
-  top: 30%;
+  top: 40%;
   transform: translateY(-50%);
   margin: auto;
   padding: 0;
@@ -272,7 +272,11 @@ html:not([data-scroll="0"]) .navbar {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  background: none;
+  border: transparent;
+  
 }
+
 
 .close:hover,
 .close:focus {

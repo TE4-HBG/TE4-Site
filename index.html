@@ -45,11 +45,11 @@
             <div id="projekts" class="container-width">
                 <br>
                 <div id="projeks-container">
-                    <div class="projekt" onclick="showModal()">
+                    <div class="projekt" onclick="showModal('myModal')">
                         <h3>Webbshop</h3>
                         <img src="images/cart.jpg" alt="">
                     </div>
-                    <div class="projekt">
+                    <div class="projekt" onclick="showModal('myModal-infoskärm')">
                         <h3>Infoskärm</h3>
                         <img src="images/infoscreen.jpg" alt="">
                     </div>
@@ -86,23 +86,40 @@
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Praktik Valencia/Sverige</h2>
+            <button onclick="close('myModal')" class="close">&times;</button>
+            <h2>Projekt: Kundvagn</h2>
           </div>
           <div class="modal-body">
             <div class="content">
-                <h5>10 april - 5 maj 2023</h5>
-                <p>
-                  Resterande 4 veckors praktik fick man välja om man ville åka ner till Valencia eller vara kvar i Sverige. Åtta av tio
-                  åkte till Valencia. Under dessa veckor var vi på 7 olika företag. Nedan ser du vilka som var på vilket företag.
+                <h5>29 augusti - 8 september 2022</h5>
+                <p>Årets första projekt var en shoppingsida byggd i HTML, CSS och JavaScript. Man skulle kunna lägga in saker i en kundvagn
+                och kunna checka ut och på något sätt få ett kvitto på det man köpt. Vi delades in i tre grupper om tre. Nedan finns länkar till varje grupps projekt.
                   <br><br>
-                  Mediterraneo Culinary Center - Hugo & Benjamin<br>
-                  Edein - Anna & Adrian<br>
-                  Lienzzo - Isaac & Sakda<br>
-                  Maui Learning Center - Tim<br>
-                  Shackelton International School - Lefteris<br>
-                  Bildeve - Isac<br>
-                  Hetch AB - Leo
+                  <strong><a href="Projects/Project1/papershop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Papershop</a></strong><br>
+                  <strong><a href="Projects/Project1/skohemsida.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Skohemsida</a></strong><br>
+                  <strong><a href="Projects/Project1/traktorshop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Traktorshop</a></strong>
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal-infoskärm" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button onclick="close('myModal-infoskärm')" class="close">&times;</button>
+            <h2>Projekt: Infoskärm</h2>
+          </div>
+          <div class="modal-body">
+            <div class="content">
+                <h5>12 september - 30 september 2022</h5>
+                <p>Årets andra projekt var att skapa en infoskärm till en lärare på skolan. På denna skärm skulle läraren kunna välja vad
+                som ska visas upp för varje vecka samt få upp olika komponenter med information såsom busstidtabeller och väder. Alla på
+                Te4 jobbade i en stor grupp för att få fram ett resultat. Nedan finns länk till mer beskrivning om projektet.
+                  <br><br>
+                  <strong><a href="Projects/Project2/infoskärm.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Infoskärm</a></strong>
                 </p>
               </div>
           </div>
