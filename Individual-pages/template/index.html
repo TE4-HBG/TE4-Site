@@ -10,21 +10,32 @@
         --portrait: url("sad.png");
       }
       * {
-        font-family: "Poppins", sans-serif;
+        font-family: Poppins, sans-serif;
         margin: 0;
       }
       .background {
-        background: #d14cb6;
+        background-image: url("../../images/te4-outside.png");
+        background-position: center;
+        background-size: cover;
       }
-      .body {
-        background-color: white;
-        width: auto;
-        padding: 1rem;
-        margin: 5%;
-        border-radius: 1rem;
+      .body-container {
+        height: 100%;
+        max-width: 70rem;
+        min-width: 51rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
       }
       .body {
         color: black;
+        background-color: white;
+        max-width: 100%;
+        min-width: 80%;
+        padding: 1rem;
+        margin: 4rem 3rem;
+
+        
+        border-radius: 1rem;
       }
       .body h1 {
         content: "bruh";
@@ -48,7 +59,7 @@
         margin: auto;
       }
       .portrait {
-        height: 75%;
+        height: 60%;
         aspect-ratio: 1/1;
         background-image: var(--portrait);
         background-position: center;
@@ -67,37 +78,65 @@
         align-self: flex-start;
         margin-top: 6rem;
         */
-        width: 60%;
+        max-width: 20rem;
+        min-width: 5rem;
       }
       .about h2 {
         margin-bottom: 0.5rem;
       }
+      .project-container {
+        display: flex;
+        justify-content: center;
+      }
+      .project-container > * {
+        padding: 2rem;
+        width: calc(100%/4);
+        color: white;
+        background-color: rgb(59, 36, 74);
+        border-radius: 1.5rem;
+      }
+      .project-container > * ul > li::marker {
+        padding: 0.125rem;
+        margin: 0;
+      }
     </style>
   </head>
   <body class="background">
-    <div class="body">
-      <h1>Namn Namnsson</h1>
-      <div class="line"></div>
-      <div class="about-section">
-        <div class="center">
-          <div class="portrait"></div>
+    <div class="body-container">
+      <div class="body">
+        <h1>Namn Namnsson</h1>
+        <div class="line"></div>
+        <div class="about-section">
+          <div class="center">
+            <div class="portrait"></div>
+          </div>
+          <div class="center">
+            <div class="about">
+              <h2>Om mig:</h2>
+              when you at the when you amazing words wrods on he screen WORDS
+              WORDS ON THE SCREEN. this is me when the words on the screen have
+              any relative meaning i am i am just typing stuff here this is
+              lorem ipsum 2.0 lorem ipsum dolor amter and then i walked to the
+              store and i bought some milk and then i drank the milk and the i
+              felt like shit and then i died and was reborn as a catterpillar
+              and then i died again.
+            </div>
+          </div>
         </div>
-        <div class="center">
-          <div class="about">
-            <h2>Om mig:</h2>
-            funny zone 2 hahaha wowie ofnskjfnaflnsflasf when you at the when
-            you amazing words wrods on he screen WORDS WORDS ON THE SCREEN. this
-            is me when the words on the screen have any relative meaning i am i
-            am just typing stuff here this is lorem ipsum 2.0 lorem ipsum dolor
-            amter and then i walked to the store and i bought some milk and then
-            i drank the milk and the i felt like shit and then i died and was
-            reborn as a catterpillar and then i died.
+        <div class="line"></div>
+        <h1>Mina projekt-bidrag:</h1>
+        <div class="project-container">
+          <div>
+            <h3>Rat on the Ru 2 2 n</h3>
+            <ul>
+              <li>Kodning</li>
+              <li>Grafik</li>
+              <li>Musik</li>
+              <li>Allt</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="line"></div>
-      <h1>Projekt:</h1>
-      <div style="margin-top: 50rem; text-align: center; margin-bottom: 50rem;">nothing 💀</div>
     </div>
   </body>
 </html>
