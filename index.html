@@ -53,15 +53,15 @@
                         <h3>Infoskärm</h3>
                         <img src="images/infoscreen.jpg" alt="">
                     </div>
-                    <div class="projekt">
+                    <div class="projekt" onclick="showModal('myModal-spel')">
                         <h3>Unity Spel</h3>
                         <img src="images/spel.jpg" alt="">
                     </div>
-                    <div class="projekt">
+                    <div class="projekt" onclick="showModal('myModal-react')">
                         <h3>React API site</h3>
                         <img src="images/react.jpg" alt="">
                     </div>
-                    <div class="projekt">
+                    <div class="projekt" onclick="showModal('myModal-site')">
                         <h3>Denna sidan!</h3>
                         <img src="images/react.jpg" alt="">
                     </div>
@@ -95,9 +95,9 @@
                 <p>Årets första projekt var en shoppingsida byggd i HTML, CSS och JavaScript. Man skulle kunna lägga in saker i en kundvagn
                 och kunna checka ut och på något sätt få ett kvitto på det man köpt. Vi delades in i tre grupper om tre. Nedan finns länkar till varje grupps projekt.
                   <br><br>
-                  <strong><a href="Projects/Project1/papershop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Papershop</a></strong><br>
-                  <strong><a href="Projects/Project1/skohemsida.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Skohemsida</a></strong><br>
-                  <strong><a href="Projects/Project1/traktorshop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Traktorshop</a></strong>
+                  <strong><a target="_blank" href="Projects/Project1/papershop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Papershop</a></strong><br>
+                  <strong><a target="_blank" href="Projects/Project1/skohemsida.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Skohemsida</a></strong><br>
+                  <strong><a target="_blank" href="Projects/Project1/traktorshop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Traktorshop</a></strong>
                 </p>
               </div>
           </div>
@@ -119,13 +119,72 @@
                 som ska visas upp för varje vecka samt få upp olika komponenter med information såsom busstidtabeller och väder. Alla på
                 Te4 jobbade i en stor grupp för att få fram ett resultat. Nedan finns länk till mer beskrivning om projektet.
                   <br><br>
-                  <strong><a href="Projects/Project2/infoskärm.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Infoskärm</a></strong>
+                  <strong><a target="_blank" href="Projects/Project2/infoskärm.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Infoskärm</a></strong>
                 </p>
               </div>
           </div>
         </div>
       </div>
-
+    <div id="myModal-spel" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" onclick="document.querySelector('#myModal-spel').style.display = 'none'";">&times;</button>
+            <h2>Projekt: Spel</h2>
+          </div>
+          <div class="modal-body">
+            <div class="content">
+                <h5>13 oktober - 28 oktober 2022</h5>
+                <p>Årets tredje projekt var att skapa ett spel i Unity. Vi hade temat “Running out of space” att utgå från. Vi delades in i
+                två grupper om fem. Resultatet blev två väldigt olika spel. Nedan finns länkar till varje grupps spel.
+                  <br><br>
+                  <strong><a target="_blank" href="Projects/Project3/rat-on-the-run.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Rat on the run</a></strong><br>
+                  <strong><a target="_blank" href="Projects/Project3/run-and-jump.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Run N Jump</a></strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="myModal-react" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" onclick="document.querySelector('#myModal-react').style.display = 'none'";">&times;</button>
+            <h2>Projekt: React</h2>
+          </div>
+          <div class="modal-body">
+            <div class="content">
+                <h5>21 november - 16 december 2022</h5>
+                <p>Årets femte projekt var att skapa en hemsida i ramverket React. Vi skulle ha ett inloggningssystem samt koppla till ett
+                API. Vi delades in i två grupper om fem. Nedan finns länkar till varje grupps projekt.
+                  <br><br>
+                  <strong><a target="_blank" href="Projects/Project4/gymnasieskolor.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Gymnasieskolor</a></strong><br>
+                  <strong><a target="_blank" href="Projects/Project4/nobelpriser.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Nobelpriser</a></strong>
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal-site" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" onclick="document.querySelector('#myModal-site').style.display = 'none'";">&times;</button>
+            <h2>Projekt: TE4</h2>
+          </div>
+          <div class="modal-body">
+            <div class="content">
+                <h5>21 november - 16 december 2022</h5>
+                <p>Årets femte projekt var att skapa en hemsida i ramverket React. Vi skulle ha ett inloggningssystem samt koppla till ett
+                API. Vi delades in i två grupper om fem. Nedan finns länkar till varje grupps projekt.
+                  <br><br>
+                  <strong><a target="_blank" href="Projects/Project4/gymnasieskolor.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Gymnasieskolor</a></strong><br>
+                  <strong><a target="_blank" href="Projects/Project4/nobelpriser.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Nobelpriser</a></strong>
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
