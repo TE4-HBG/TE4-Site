@@ -154,6 +154,10 @@ h2 {
 }
 
 /*students------------*/
+.missing-student {
+  filter: opacity(0.25);
+}
+
 .student-cards a {
   background-color: white;
   padding: 1.1rem 1.1rem 2rem 1.1rem;
@@ -187,7 +191,8 @@ h2 {
   width: 300px; /* Set the desired width */
   aspect-ratio: 4/5; /* Set the desired aspect ratio */
   overflow: hidden; /* Crop the content that exceeds the container */
-
+  transform: translateX(-50%);
+  left: 50%;
 }
 .student:hover {
   
@@ -196,12 +201,14 @@ h2 {
 .img-container {
 
 }
+
 .student img {
   position: relative;
   transform: translateX(-50%);
   left: 50%;
   top: 0;
   max-width: 450px;
+  height: 100%;
 }
 .student-name {
   position: relative;
