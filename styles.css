@@ -366,4 +366,11 @@ html:not([data-scroll="0"]) .navbar {
   .container-width {
     width: 95%;
   }
+
+  .navbar-link-div {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
