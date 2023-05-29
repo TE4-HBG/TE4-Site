@@ -83,7 +83,7 @@ h2 {
 }
 
 .projekt {
-  width: 13vw;
+  width: 11vw;
   aspect-ratio: 3/4;
   position: relative;
   overflow: hidden;
@@ -371,5 +371,16 @@ html:not([data-scroll="0"]) .navbar {
 @media only screen and (max-width: 600px) {
   .container-width {
     width: 95%;
+  }
+  
+}
+
+@media only screen and (max-width: 1100px) {
+  .projekt {
+    width: 9rem;
+    margin: 1%;
+  }
+  .projekt h3 {
+    font-size: 1.2rem;
   }
 }
