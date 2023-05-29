@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://te4ntihbg.se/22_23/index.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Individual Pages -->
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/anna.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/benjamin.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/hugo.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/isaac.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/isac.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/lefteris.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/leo.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/sakda.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Individual-pages/template.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Projects -->
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project1/</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project1/papershop.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project1/skohemsida.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project1/traktorshop.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project2/</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project2/infoskärm.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project3/</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project3/rat-on-the-run.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project3/run-and-jump.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project4/</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project4/gymnasieskolor.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://te4ntihbg.se/22_23/Projects/Project4/nobelpriser.html</loc>
+        <lastmod>2023-05-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>
