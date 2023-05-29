@@ -194,13 +194,7 @@ h2 {
   transform: translateX(-50%);
   left: 50%;
 }
-.student:hover {
-  
-}
 
-.img-container {
-
-}
 
 .student img {
   position: relative;
@@ -216,6 +210,18 @@ h2 {
   transform: translateY(-55%);
   text-decoration: none;
 }
+
+/*teachers------------*/
+#teachers {
+  color: white;
+  padding-top: 2vw;
+  background-image: url('images/te4-teachers.jpg');
+  background-position: center center;  
+  padding-bottom: 2em;
+  height: 100%;
+}
+
+
 
 /*navbar---------------------*/
 .navbar {
