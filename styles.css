@@ -136,7 +136,7 @@ h2 {
 #about {
   background: url(images/te4-outside.png);
   background-position: center center;
-  padding-bottom: 2em;
+  padding-bottom: 4rem;
 }
 #about-box {
   border-radius: 0.5em;
@@ -151,6 +151,70 @@ h2 {
   width: 100%;
   display: inline-block;
   text-align: right;
+}
+
+/*students------------*/
+.missing-student {
+  filter: opacity(0.25);
+}
+
+.student-cards a {
+  background-color: white;
+  padding: 1.1rem 1.1rem 2rem 1.1rem;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
+  margin: 0.3vw;
+  margin-bottom: 1.5vw;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  transition: 150ms;
+}
+
+.student-cards a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 30px 40px rgba(0,0,0,0.15);
+
+}
+.student-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#elever {
+  background-color: var(--bg-ac);
+}
+
+.student {
+  background-color: white;  
+  position: relative;
+  width: 300px; /* Set the desired width */
+  aspect-ratio: 4/5; /* Set the desired aspect ratio */
+  overflow: hidden; /* Crop the content that exceeds the container */
+  transform: translateX(-50%);
+  left: 50%;
+}
+.student:hover {
+  
+}
+
+.img-container {
+
+}
+
+.student img {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  max-width: 450px;
+  height: 100%;
+}
+.student-name {
+  position: relative;
+  bottom: -2rem;
+  transform: translateY(-55%);
+  text-decoration: none;
 }
 
 /*navbar---------------------*/
