@@ -55,15 +55,32 @@
         opacity: 0;
         transition: opacity 2s;
       }
-      .blacklivesmatter {
-        background-color: black;
+      .cool-guy {
+        background-image: url("../../images/Leo.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .activator-anim {
+        background-image: url("./klohger.png");
+        image-rendering: pixelated;
+        box-shadow: 0px 0px 0px transparent;
+        aspect-ratio: 1/1 !important;
+        border-radius: 0rem;
+        transition: aspect-ratio 2s, background-image 2s, box-shadow 2s,
+          border-radius 2s;
+      }
+
+      .background-anim {
+        background-color: rgba(22, 0, 35, 255) !important;
+
         transition: background-color 2s;
       }
       .cool-text::before {
+        white-space: pre;
         content: "Leo Kordelin Öhlander";
         animation-name: test1;
-        animation-duration: 2s;
-        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-delay: 1.5s;
         animation-iteration-count: 1;
         animation-play-state: paused;
         animation-fill-mode: forwards;
@@ -99,53 +116,68 @@
         0% {
           content: "Leo Kordelin Öhlander";
         }
-        5.5555% {
-          content: "eo Kordelin Öhlander";
+        2.94117647059% {
+          content: "eo KLordelin Öhlander";
         }
-        11.1111% {
-          content: "o Kordelin Öhlander";
+        5.88235294118% {
+          content: "eo KLordelin Öhlander";
         }
-        16.6667% {
-          content: "Kordelin Öhlander";
+        8.82352941176% {
+          content: "eo KLordelin Öhlander";
         }
-        27.7778% {
+        11.7647058824% {
+          content: "o KLordelin Öhlander";
+        }
+        14.7058823529% {
           content: "KLordelin Öhlander";
         }
-        33.3333% {
+        17.6470588235% {
+          content: "KLordelin Öhlander";
+        }
+        20.5882352941% {
           content: "KLodelin Öhlander";
         }
-        38.8889% {
+        23.5294117647% {
           content: "KLoelin Öhlander";
         }
-        44.4444% {
+        26.4705882353% {
           content: "KLolin Öhlander";
         }
-        50% {
+        29.4117647059% {
           content: "KLoin Öhlander";
         }
-        55.5555% {
+        32.3529411765% {
           content: "KLon Öhlander";
         }
-        61.1111% {
+        35.2941176471% {
           content: "KLo Öhlander";
         }
-        66.6667% {
-          content: "KLoÖhlander";
+        38.2352941176% {
+          content: "KLo Öhlander";
         }
-        72.2222% {
-          content: "KLohlander";
+        41.1764705882% {
+          content: "KLo hlander";
         }
-        77.7777% {
-          content: "KLohglander";
+        44.1176470588% {
+          content: "KLo hander";
         }
-        83.3333% {
-          content: "KLohgander";
+        47.0588235294% {
+          content: "KLo hnder";
         }
-        88.8889% {
-          content: "KLohgnder";
+        50% {
+          content: "KLo hder";
         }
-        94.4444% {
-          content: "KLohgder";
+        52.9411764706% {
+          content: "KLo her";
+        }
+        55.8823529412% {
+          content: "KLoher";
+        }
+        58.8235294118% {
+          content: "KLoher";
+        }
+        61.7647058824% {
+          content: "KLohger";
         }
         100% {
           content: "KLohger";
@@ -174,10 +206,21 @@
           background-position: -150% 0%;
         }
       }
+
+      .project-contributions-container > a > div > * > ul {
+        padding: 0;
+        text-align: start;
+      }
+      .background-blur-anim {
+        backdrop-filter: blur(0rem) invert(100%) hue-rotate(145deg) 
+          saturate(1.5) brightness(0.25);
+        transition: backdrop-filter 2s;
+      }
     </style>
   </head>
 
   <body>
+    <div id="background-blur" class="blurrer"></div>
     <div class="project-container">
       <div class="rainbower">
         <h1 class="cool-text"></h1>
@@ -195,16 +238,20 @@
         <h2 class="rainbow-text">Om mig</h2>
       </div>
       <div class="about-container">
-        <img
+        <div
           id="activator"
           src="../../images/Leo.png"
-          class="portrait pointer"
+          class="portrait pointer cool-guy"
           onclick="
       if (!activated) {
         activated = true
         PlayAudio();
-        document.getElementById('activator').classList.remove('pointer')
-        document.getElementsByClassName('project-container').item(0).classList.add('blacklivesmatter')
+        let classlist = document.getElementById('activator').classList.remove('pointer')
+        document.getElementById('activator').classList.add('activator-anim')
+        
+        document.getElementById('background-blur').classList.add('background-blur-anim' )
+
+        classlist = document.getElementsByClassName('project-container').item(0).classList.add('background-anim')
 
         const rainbowers = document.getElementsByClassName('rainbower')
 
@@ -217,11 +264,11 @@
         }
       }
       "
-        />
+        ></div>
         <!--Rätt bild (../images/)-->
         <div class="rainbower">
-          <p>Jag gillar att skapa.</p>
-          <p class="rainbow-text small">Jag gillar att skapa.</p>
+          <h3>Jag gillar att skapa.</h3>
+          <h3 class="rainbow-text small">Jag gillar att skapa.</h3>
         </div>
 
         <!--Skriv en kort text om dig och lägg in-->
@@ -239,12 +286,21 @@
         <a href="../../Projects/Project1/papershop.html">
           <!--Vilket projekt i Project1 mappen-->
           <div>
-            <h2>Webbshop</h2>
+            <div class="rainbower">
+              <h2>Webbshop</h2>
+              <h2 class="rainbow-text alt small">Webbshop</h2>
+            </div>
             <!--Rätt rubrik (Traktorshop, Papershop eller Skohemsida)-->
-            <ul>
-              <li><h3>Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-            </ul>
+            <div class="rainbower">
+              <ul>
+                <li><h3>Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+              <ul class="rainbow-text alt small">
+                <li><h3>Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+            </div>
           </div>
           <div class="rainbower project-background">
             <div class="project-background shop"></div>
@@ -255,11 +311,20 @@
 
         <a href="../../Projects/Project2/infoskärm.html">
           <div>
-            <h2>Infoskärm</h2>
-            <ul>
-              <li><h3>Backend Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-            </ul>
+            <div class="rainbower">
+              <h2>Infoskärm</h2>
+              <h2 class="rainbow-text alt small">Infoskärm</h2>
+            </div>
+            <div class="rainbower">
+              <ul>
+                <li><h3>Backend Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+              <ul class="rainbow-text alt small">
+                <li><h3>Backend Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+            </div>
           </div>
           <div class="rainbower project-background">
             <div class="project-background infoscreen"></div>
@@ -271,14 +336,24 @@
         <a href="../../Projects/Project3/rat-on-the-run.html">
           <!--Vilket projekt i Project3 mappen-->
           <div>
-            <h2>Rat on the run</h2>
-            <!--Rätt rubrik (Rat on the run eller Run N Jump)-->
-            <ul>
-              <li><h3>GruppLedare</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              <li><h3>Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-            </ul>
+            <div class="rainbower">
+              <h2>Rat on the run</h2>
+              <h2 class="rainbow-text alt small">Rat on the run</h2>
+            </div>
+            <div class="rainbower">
+              <ul>
+                <li><h3>GruppLedare</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+                <li><h3>Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+              <ul class="rainbow-text alt small">
+                <li><h3>GruppLedare</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+                <li><h3>Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              </ul>
+            </div>
           </div>
           <div class="rainbower project-background">
             <div class="project-background game"></div>
@@ -290,14 +365,19 @@
         <a href="../../Projects/Project4/nobelpriser.html">
           <!--Vilket projekt i Project4 mappen-->
           <div>
-            <h2>React</h2>
-            <!--Rätt rubrik (Gymnasieskolor eller Nobelpriser)-->
-            <ul>
-              <li><h3>Backend Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              <li><h3>Frontend Styling</h3></li>
-              <li><h3>API-hantering</h3></li>
-            </ul>
+            <div class="rainbower">
+              <h2>Nobelfinder</h2>
+              <h2 class="rainbow-text alt small">Nobelfinder</h2>
+            </div>
+            <div class="rainbower">
+              <ul></ul>
+              <ul class="rainbow-text alt small">
+                <li><h3>Backend Kodning</h3></li>
+                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+                <li><h3>Frontend Styling</h3></li>
+                <li><h3>API-hantering</h3></li>
+              </ul>
+            </div>
           </div>
           <div class="rainbower project-background">
             <div class="project-background react"></div>
@@ -307,37 +387,68 @@
         </a>
       </div>
 
-      <div class="line"></div>
-      <h2>Individuellt projekt</h2>
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
+      <div class="rainbower">
+        <h2>Individuellt projekt</h2>
+        <h2 class="rainbow-text">Individuellt projekt</h2>
+      </div>
       <div class="video-container">
-        <video controls autoplay class="project-video">
-          <source src="" type="video/mp4" />
-          <!--Lägg in video från ditt projekt i individual-videos mappen och länka till den-->
+        <video aria-colspan="individual-video" controls class="project-video">
+          <source src="./individuell.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div>
-          <p>Text om individuellt projekt...</p>
-          <!--Skriv text om ditt individuella och lägg in-->
-          <!--Länka Github repot för individuella i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
-          <p>
-            <a href="" class="link" target="_blank"
-              ><img src="../../../images/github-icon.png" class="github-icon" />
-              Github <img src="../../../images/link-icon.png" class="link-icon"
-            /></a>
-          </p>
+          <div class="rainbower">
+            <h3>
+              Originellt skulle jag göra en klon av candy crush i en egen
+              spelmotor, men all funktionalitet jag ville implementera insåg jag
+              var alltför mycket för den tidsram jag hade. <br />
+              Eftersom jag redan hade gjort en del av spelmotorn, så bestämmde
+              jag att istället utveckla den och presentera den istället.
+            </h3>
+            <h3 class="rainbow-text">
+              Originellt skulle jag göra en klon av candy crush i en egen
+              spelmotor, men all funktionalitet jag ville implementera insåg jag
+              var alltför mycket för den tidsram jag hade. <br />
+              Eftersom jag redan hade gjort en del av spelmotorn, så bestämmde
+              jag att istället utveckla den och presentera den istället.
+            </h3>
+          </div>
+          <div class="rainbower">
+            <a href="https://github.com/Klohger/PlayMotor" class="link" target="_blank">
+              <img src="../../../images/github-icon.png" class="github-icon" />
+              Github
+              <img src="../../../images/link-icon.png" class="link-icon" />
+            </a>
+
+            <a href="https://github.com/Klohger/PlayMotor" class="link rainbow-text" target="_blank">
+              <img src="../../../images/github-icon.png" class="github-icon" />
+              Github
+              <img src="../../../images/link-icon.png" class="link-icon" />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="line"></div>
-      <h2>Examensarbete</h2>
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
+      <div class="rainbower">
+        <h2>Examensarbete</h2>
+        <h2 class="rainbow-text">Examensarbete</h2>
+      </div>
       <div class="video-container">
-        <video controls autoplay class="project-video">
-          <source src="" type="video/mp4" />
-          <!--Lägg in video från ditt projekt i examensarbete-videos mappen och länka till den-->
-          Your browser does not support the video tag.
-        </video>
+        <img class="project-video" src="./graph.svg">
+        
         <div>
-          <p>Text om examensarbete...</p>
+          <div class="rainbower">
+            <h3>Text om examensarbete...</h3>
+            <h3 class="rainbow-text">Text om examensarbete...</h3>
+          </div>
           <!--Skriv text om ditt examensarbete och lägg in-->
           <!--Länka Github repot för examensarbete i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
           <p>
@@ -355,15 +466,24 @@
         </div>
       </div>
 
-      <div class="line"></div>
-      <h2>Certifikat</h2>
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
+      <div class="rainbower">
+        <h2>Certifikat</h2>
+        <h2 class="rainbow-text">Certifikat</h2>
+      </div>
       <p>Följande certifikat har jag tagit</p>
       <ul>
         <li><p>ITS - Software Development</p></li>
         <!--Vilka certifikat har du tagit (Om du inte tagit några ta bort hela detta segment, från rad 111 till 116)-->
       </ul>
 
-      <div class="line"></div>
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
       <p>
         Kontakta mig gärna på linkedin eller kika på några av mina projekt på
         github!
@@ -371,11 +491,11 @@
       <div>
         <!--Länka till din linkedIn profil-->
         <a href="" target="_blank"
-          ><img src="../images/linkedIn-logo.png" class="contact-link"
+          ><img src="../../images/linkedIn-logo.png" class="contact-link"
         /></a>
         <!--Länka till ditt privata github konto-->
         <a href="" target="_blank"
-          ><img src="../images/github-icon-purple.png" class="contact-link"
+          ><img src="../../images/github-icon-purple.png" class="contact-link"
         /></a>
       </div>
     </div>
