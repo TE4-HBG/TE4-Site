@@ -227,6 +227,26 @@ body {
   }
 }
 
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+}
+.img-container span {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.img-container img {
+  border-radius: 10px;
+  width: 100%;
+  margin: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
 @media screen and (min-width: 1200px) {
   /* Över 1200px */
   .project-container {
