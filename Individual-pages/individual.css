@@ -1,0 +1,223 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/te4-outside.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Poppins, sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.project-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 1rem;
+}
+
+.project-container h1 {
+  font-size: 2.3em;
+}
+
+.line {
+  height: 0.125rem;
+  width: 100%;
+  margin: auto;
+  background-color: gray;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.portrait {
+  aspect-ratio: 3/4;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px grey;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.about-container {
+  display: flex;
+  justify-content: start;
+}
+
+.project-image {
+  aspect-ratio: 4 / 3;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px grey;
+}
+
+.project-video {
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0px 0px 15px grey;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+  color: indigo;
+  border-bottom: 2px solid indigo;
+}
+
+.link-icon {
+  height: 14px;
+}
+
+.github-icon {
+  height: 18px;
+}
+
+.github-link {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.filler-list-item {
+  list-style-type: none;
+}
+
+.project-contributions-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.project-contributions-container > a {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: rgb(59, 36, 74);
+  border-radius: 1.5rem;
+  text-decoration: none;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 0;
+}
+.project-contributions-container > a > div {
+  padding: 1rem;
+  box-sizing: border-box;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-contributions-container > a > div > ul {
+  padding: 0;
+  text-align: start;
+}
+.project-contributions-container > a > div > ul > li::marker {
+  padding: 0rem;
+  margin: 0;
+}
+.project-contributions-container > a > .blurrer {
+  backdrop-filter: blur(0.2rem) brightness(0.7);
+  position: relative;
+  z-index: 2;
+  border-radius: 1.5rem;
+}
+.project-contributions-container > a:hover > .blurrer {
+  backdrop-filter: blur(0.15rem) brightness(0.9);
+  transition-duration: 0.1s;
+}
+
+.project-background {
+  background-size: cover;
+  z-index: 2 !important;
+  border-radius: 1.5rem;
+}
+
+.project-background.shop {
+  background-image: url("../images/cart.jpg");
+}
+.project-background.infoscreen {
+  background-image: url("../images/infoscreen.jpg");
+}
+.project-background.game {
+  background-image: url("../images/spel.jpg");
+}
+.project-background.react {
+  background-image: url("../images/react.jpg");
+}
+
+.contact-link {
+  height: 40px;
+  padding-right: 1rem;
+  filter: grayscale(1) contrast(2.8);
+  transition: 100ms;
+}
+
+.contact-link:hover {
+  filter: grayscale(0) contrast(1);
+}
+
+@media screen and (min-width: 700px) {
+  /* Mellan 700px och 1200px */
+  .video-container {
+    display: flex;
+    justify-content: start;
+  }
+
+  .presentation-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-image {
+    width: 45%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-video {
+    width: 50%;
+    height: 100%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-container {
+    padding: 1.2rem 2.5rem;
+  }
+
+  .project-contributions-container > a {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Över 1200px */
+  .project-container {
+    width: 60%;
+  }
+}

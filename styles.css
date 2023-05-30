@@ -163,7 +163,7 @@ h2 {
 .student-cards a {
   background-color: white;
   padding: 1.1rem 1.1rem 2rem 1.1rem;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
   margin: 0.3vw;
   margin-bottom: 1.5vw;
   text-decoration: none;
@@ -175,8 +175,7 @@ h2 {
 
 .student-cards a:hover {
   transform: scale(1.1);
-  box-shadow: 0px 30px 40px rgba(0,0,0,0.15);
-
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.15);
 }
 .student-cards {
   display: flex;
@@ -189,7 +188,7 @@ h2 {
 }
 
 .student {
-  background-color: white;  
+  background-color: white;
   position: relative;
   width: 300px; /* Set the desired width */
   aspect-ratio: 4/5; /* Set the desired aspect ratio */
@@ -417,5 +416,17 @@ html:not([data-scroll="0"]) .navbar {
   }
   .projekt h3 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-content {
+    width: 90%;
   }
 }
