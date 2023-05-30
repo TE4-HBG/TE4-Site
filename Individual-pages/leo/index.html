@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../individual.css" />
+    <title>Leo Kordelin Öhlander - TE4 Site 22/23</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --rainbow: linear-gradient(
+          to left,
+          hsl(0deg, 100%, 50%),
+          hsl(22.5deg, 100%, 50%),
+          hsl(45deg, 100%, 50%),
+          hsl(67.5deg, 100%, 50%),
+          hsl(112.5deg, 100%, 50%),
+          hsl(135deg, 100%, 50%),
+          hsl(157.5deg, 100%, 50%),
+          hsl(180deg, 100%, 50%),
+          hsl(202.5deg, 100%, 50%),
+          hsl(225deg, 100%, 50%),
+          hsl(247.5deg, 100%, 50%),
+          hsl(270deg, 100%, 50%),
+          hsl(292.5deg, 100%, 50%),
+          hsl(315deg, 100%, 50%),
+          hsl(337.5deg, 100%, 50%),
+          hsl(360deg, 100%, 50%)
+        );
+      }
+
+      #activator {
+        user-select: none;
+      }
+
+      .rainbower {
+        display: grid !important;
+        grid-auto-columns: 1fr;
+        gap: 0;
+        padding: 0 !important;
+      }
+      .rainbower > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+      .nopacity {
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      .blacklivesmatter {
+        background-color: black;
+        transition: background-color 2s;
+      }
+      .cool-text::before {
+        content: "Leo Kordelin Öhlander";
+        animation-name: test1;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-play-state: paused;
+        animation-fill-mode: forwards;
+      }
+      .rainbow-div {
+        z-index: 1;
+        background: var(--rainbow);
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .rainbow-text {
+        z-index: 1;
+        color: transparent;
+        background: var(--rainbow);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .rainbower > *.alt {
+        animation: shmove2 5s linear infinite;
+      }
+      .rainbower > *.small {
+        background-size: 50% 100%;
+      }
+      .rainbower.project-background > * {
+        height: 100%;
+      }
+      @keyframes test1 {
+        0% {
+          content: "Leo Kordelin Öhlander";
+        }
+        5.5555% {
+          content: "eo Kordelin Öhlander";
+        }
+        11.1111% {
+          content: "o Kordelin Öhlander";
+        }
+        16.6667% {
+          content: "Kordelin Öhlander";
+        }
+        27.7778% {
+          content: "KLordelin Öhlander";
+        }
+        33.3333% {
+          content: "KLodelin Öhlander";
+        }
+        38.8889% {
+          content: "KLoelin Öhlander";
+        }
+        44.4444% {
+          content: "KLolin Öhlander";
+        }
+        50% {
+          content: "KLoin Öhlander";
+        }
+        55.5555% {
+          content: "KLon Öhlander";
+        }
+        61.1111% {
+          content: "KLo Öhlander";
+        }
+        66.6667% {
+          content: "KLoÖhlander";
+        }
+        72.2222% {
+          content: "KLohlander";
+        }
+        77.7777% {
+          content: "KLohglander";
+        }
+        83.3333% {
+          content: "KLohgander";
+        }
+        88.8889% {
+          content: "KLohgnder";
+        }
+        94.4444% {
+          content: "KLohgder";
+        }
+        100% {
+          content: "KLohger";
+        }
+      }
+      .pacity {
+        opacity: 100%;
+        transition: opacity 2s;
+      }
+      .swag::before {
+        animation-play-state: running !important;
+      }
+      @keyframes shmove {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: -100% 0%;
+        }
+      }
+      @keyframes shmove2 {
+        0% {
+          background-position: -50% 0%;
+        }
+        100% {
+          background-position: -150% 0%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="project-container">
+      <div class="rainbower">
+        <h1 class="cool-text"></h1>
+        <h1 class="rainbow-text cool-text"></h1>
+      </div>
+
+      <!--Ditt namn (För och efternamn)-->
+
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
+      <div class="rainbower">
+        <h2>Om mig</h2>
+        <h2 class="rainbow-text">Om mig</h2>
+      </div>
+      <div class="about-container">
+        <img
+          id="activator"
+          src="../../images/Leo.png"
+          class="portrait pointer"
+          onclick="
+      if (!activated) {
+        activated = true
+        PlayAudio();
+        document.getElementById('activator').classList.remove('pointer')
+        document.getElementsByClassName('project-container').item(0).classList.add('blacklivesmatter')
+
+        const rainbowers = document.getElementsByClassName('rainbower')
+
+        for (let i = 0; i < rainbowers.length; i++) {
+          const element = rainbowers.item(i);
+
+          const children = element.children;
+          children.item(0).classList.add('nopacity', 'swag')
+          children.item(1).classList.add('pacity', 'swag')
+        }
+      }
+      "
+        />
+        <!--Rätt bild (../images/)-->
+        <div class="rainbower">
+          <p>Jag gillar att skapa.</p>
+          <p class="rainbow-text small">Jag gillar att skapa.</p>
+        </div>
+
+        <!--Skriv en kort text om dig och lägg in-->
+      </div>
+
+      <div class="rainbower">
+        <div class="line"></div>
+        <div class="line rainbow-div"></div>
+      </div>
+      <div class="rainbower">
+        <h2>Mina projekt-bidrag</h2>
+        <h2 class="rainbow-text">Mina projekt-bidrag</h2>
+      </div>
+      <div class="project-contributions-container">
+        <a href="../../Projects/Project1/papershop.html">
+          <!--Vilket projekt i Project1 mappen-->
+          <div>
+            <h2>Webbshop</h2>
+            <!--Rätt rubrik (Traktorshop, Papershop eller Skohemsida)-->
+            <ul>
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="rainbower project-background">
+            <div class="project-background shop"></div>
+            <div class="project-background rainbow-div small"></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project2/infoskärm.html">
+          <div>
+            <h2>Infoskärm</h2>
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="rainbower project-background">
+            <div class="project-background infoscreen"></div>
+            <div class="project-background rainbow-div small"></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project3/rat-on-the-run.html">
+          <!--Vilket projekt i Project3 mappen-->
+          <div>
+            <h2>Rat on the run</h2>
+            <!--Rätt rubrik (Rat on the run eller Run N Jump)-->
+            <ul>
+              <li><h3>GruppLedare</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="rainbower project-background">
+            <div class="project-background game"></div>
+            <div class="project-background rainbow-div small"></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project4/nobelpriser.html">
+          <!--Vilket projekt i Project4 mappen-->
+          <div>
+            <h2>React</h2>
+            <!--Rätt rubrik (Gymnasieskolor eller Nobelpriser)-->
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Frontend Styling</h3></li>
+              <li><h3>API-hantering</h3></li>
+            </ul>
+          </div>
+          <div class="rainbower project-background">
+            <div class="project-background react"></div>
+            <div class="project-background rainbow-div small"></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+      </div>
+
+      <div class="line"></div>
+      <h2>Individuellt projekt</h2>
+      <div class="video-container">
+        <video controls autoplay class="project-video">
+          <source src="" type="video/mp4" />
+          <!--Lägg in video från ditt projekt i individual-videos mappen och länka till den-->
+          Your browser does not support the video tag.
+        </video>
+        <div>
+          <p>Text om individuellt projekt...</p>
+          <!--Skriv text om ditt individuella och lägg in-->
+          <!--Länka Github repot för individuella i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
+          <p>
+            <a href="" class="link" target="_blank"
+              ><img src="../../../images/github-icon.png" class="github-icon" />
+              Github <img src="../../../images/link-icon.png" class="link-icon"
+            /></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+      <h2>Examensarbete</h2>
+      <div class="video-container">
+        <video controls autoplay class="project-video">
+          <source src="" type="video/mp4" />
+          <!--Lägg in video från ditt projekt i examensarbete-videos mappen och länka till den-->
+          Your browser does not support the video tag.
+        </video>
+        <div>
+          <p>Text om examensarbete...</p>
+          <!--Skriv text om ditt examensarbete och lägg in-->
+          <!--Länka Github repot för examensarbete i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
+          <p>
+            <a href="" class="link" target="_blank"
+              ><img src="../../images/github-icon.png" class="github-icon" />
+              Github <img src="../../images/link-icon.png" class="link-icon"
+            /></a>
+          </p>
+          <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
+          <p>
+            <a href="" class="link" target="_blank">
+              Rapport <img src="../../images/link-icon.png" class="link-icon"
+            /></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+      <h2>Certifikat</h2>
+      <p>Följande certifikat har jag tagit</p>
+      <ul>
+        <li><p>ITS - Software Development</p></li>
+        <!--Vilka certifikat har du tagit (Om du inte tagit några ta bort hela detta segment, från rad 111 till 116)-->
+      </ul>
+
+      <div class="line"></div>
+      <p>
+        Kontakta mig gärna på linkedin eller kika på några av mina projekt på
+        github!
+      </p>
+      <div>
+        <!--Länka till din linkedIn profil-->
+        <a href="" target="_blank"
+          ><img src="../images/linkedIn-logo.png" class="contact-link"
+        /></a>
+        <!--Länka till ditt privata github konto-->
+        <a href="" target="_blank"
+          ><img src="../images/github-icon-purple.png" class="contact-link"
+        /></a>
+      </div>
+    </div>
+  </body>
+  <script>
+    let activated = false;
+    let audioShouldPlay = false;
+    let audioIsCool = false;
+
+    const audio = new Audio("JAVA_01.OGG");
+
+    audio.loop = true;
+    audio.oncanplay = async (e) => {
+      e.preventDefault();
+      if (audioShouldPlay && !audioIsCool) {
+        console.log("pog2");
+        await audio.play();
+      }
+      audioIsCool = true;
+    };
+    function PlayAudio() {
+      if (audioIsCool) {
+        console.log("pog");
+        audio.play();
+      } else {
+        audioShouldPlay = true;
+      }
+    }
+    audio.onplay = (e) => e.preventDefault();
+    audio.onpause = (e) => e.preventDefault();
+  </script>
+</html>
