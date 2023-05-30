@@ -68,7 +68,7 @@ body {
 
 .link {
   text-decoration: none;
-  color: black;
+  color: indigo;
   transition: 0.2s;
   border-bottom: 2px solid transparent;
 }
@@ -111,14 +111,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: white;
-  background-color: rgb(59, 36, 74);
-  border-radius: 1.5rem;
   text-decoration: none;
 
   display: grid;
   grid-auto-columns: 1fr;
   gap: 0;
+
+  border-radius: 1.5rem;
+  border: 3px transparent solid; /*this is spacing*/
+  outline: 0px solid transparent;
+  transition: 100ms;
 }
+
+.project-contributions-container > a:hover {
+  border: 3px transparent solid;
+  outline: 4px solid #4b0082;
+}
+
 .project-contributions-container > a > div {
   padding: 1rem;
   box-sizing: border-box;
@@ -168,6 +177,9 @@ body {
 }
 .project-background.react {
   background-image: url("../images/react.jpg");
+}
+.project-background.te4-site {
+  background-image: url("../images/te4-working.png");
 }
 
 .contact-link {
