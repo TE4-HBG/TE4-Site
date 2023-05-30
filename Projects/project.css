@@ -52,7 +52,7 @@ body {
 
 .link {
   text-decoration: none;
-  color: black;
+  color: indigo;
   transition: 0.2s;
   border-bottom: 2px solid transparent;
 }
