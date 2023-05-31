@@ -38,6 +38,25 @@
           hsl(337.5deg, 100%, 50%),
           hsl(360deg, 100%, 50%)
         );
+        --rainbow50: linear-gradient(
+          to left,
+          hsl(0deg, 100%, 50%, 0.5),
+          hsl(22.5deg, 100%, 50%, 0.5),
+          hsl(45deg, 100%, 50%, 0.5),
+          hsl(67.5deg, 100%, 50%, 0.5),
+          hsl(112.5deg, 100%, 50%, 0.5),
+          hsl(135deg, 100%, 50%, 0.5),
+          hsl(157.5deg, 100%, 50%, 0.5),
+          hsl(180deg, 100%, 50%, 0.5),
+          hsl(202.5deg, 100%, 50%, 0.5),
+          hsl(225deg, 100%, 50%, 0.5),
+          hsl(247.5deg, 100%, 50%, 0.5),
+          hsl(270deg, 100%, 50%, 0.5),
+          hsl(292.5deg, 100%, 50%, 0.5),
+          hsl(315deg, 100%, 50%, 0.5),
+          hsl(337.5deg, 100%, 50%, 0.5),
+          hsl(360deg, 100%, 50%, 0.5)
+        );
       }
       .link.cool-link {
         color: hsl(292.5deg, 100%, 50%);
@@ -88,7 +107,9 @@
       #activator {
         user-select: none;
       }
-
+      .rainbow-div.project-background {
+        background: var(--rainbow50);
+      }
       .switcharooer {
         display: grid !important;
         grid-auto-columns: 1fr;
@@ -284,10 +305,69 @@
           saturate(1.5) brightness(0.25);
         transition: backdrop-filter 2s;
       }
+      .music-shown {
+        top: 0 !important;
+        transition: top 2s;
+      }
     </style>
   </head>
 
   <body>
+    <!--
+    <div
+      id="music-player"
+      style="
+        z-index: 100;
+        position: fixed;
+        display: flex;
+        background-color: rgb(22, 0, 35);
+        border: 1rem solid white;
+        top: -50vh;
+        left: calc(100vw - 20rem);
+        align-items: center;
+      "
+    >
+      <div
+        id="music-slidey-back"
+        style="
+          width: 1.5rem;
+          height: 8rem;
+          margin: 0 2rem;
+          background: indigo;
+          image-rendering: pixelated;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
+        <div
+          id="music-slidey"
+          style="
+            width: 3rem;
+            height: 3rem;
+            background: url('music-volume-slider.png');
+
+            translate: -25% -25%;
+          "
+        ></div>
+      </div>
+      <div
+        id="music-button"
+        style="
+          margin: 2.5rem;
+          margin-left: 0;
+          margin-right: 1.25rem;
+          width: 7.5rem;
+
+          aspect-ratio: 1/1;
+          background-image: url('music-pause.png');
+          background-size: contain;
+          background-position: center;
+          image-rendering: pixelated;
+          background-repeat: no-repeat;
+        "
+      ></div>
+    </div>
+    -->
     <div id="background-blur" class="blurrer"></div>
     <div class="project-container">
       <div class="switcharooer">
@@ -314,7 +394,12 @@
       if (!activated) {
         activated = true
         PlayAudio();
+        //document.getElementById('music-player').classList.add('music-shown');
+
+
         let classlist = document.getElementById('activator').classList.remove('pointer')
+        
+
         document.getElementById('activator').classList.add('activator-anim')
         
         document.getElementById('background-blur').classList.add('background-blur-anim' )
@@ -370,9 +455,12 @@
             </ul>
           </div>
           <div class="switcharooer project-background">
-            <div class="project-background shop"></div>
             <div
-              class="project-background rainbow-div small lack-of-rizz"
+              class="project-background shop"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background shop rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
@@ -387,9 +475,12 @@
             </ul>
           </div>
           <div class="switcharooer project-background">
-            <div class="project-background infoscreen"></div>
             <div
-              class="project-background rainbow-div small lack-of-rizz"
+              class="project-background infoscreen"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background infoscreen rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
@@ -407,9 +498,12 @@
             </ul>
           </div>
           <div class="switcharooer project-background">
-            <div class="project-background game"></div>
             <div
-              class="project-background rainbow-div small lack-of-rizz"
+              class="project-background game"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background game rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
@@ -427,9 +521,12 @@
             </ul>
           </div>
           <div class="switcharooer project-background">
-            <div class="project-background react"></div>
             <div
-              class="project-background rainbow-div small lack-of-rizz"
+              class="project-background react"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background react rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
@@ -587,6 +684,18 @@
     </div>
   </body>
   <script>
+    /*
+    let selected = false;
+    const slideyBack = document.getElementById("music-slidey-back");
+    const slidey = document.getElementById("music-slidey");
+    slidey.onmousedown = (e) => (selected = true);
+    slidey.onmouseup = (e) => (selected = false);
+    window.onmousemove = (ev, huh) => {
+      if (selected) {
+        console.log("shmoved", slideyBack.clientHeight, slideyBack.client);
+      }
+    };
+    */
     let activated = false;
     let audioShouldPlay = false;
     let audioIsCool = false;
@@ -603,7 +712,11 @@
     };
     function PlayAudio() {
       if (audioIsCool) {
-        audio.play().catch((err) => console.error("OH SHIT OH FUCK THE AUDIO DIDN'T", err));
+        audio
+          .play()
+          .catch((err) =>
+            console.error("OH SHIT OH FUCK THE AUDIO DIDN'T", err)
+          );
       } else {
         audioShouldPlay = true;
       }
