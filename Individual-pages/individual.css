@@ -5,7 +5,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/te4-outside.png");
+  background-image: url("../images/te4-outside.png"),
+    linear-gradient(34deg, #4b0082 1%, #b1068c 56%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,6 +28,17 @@ body {
   font-size: 2.3em;
 }
 
+.blurrer {
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(0.3rem) invert(0%) hue-rotate(0deg) saturate(1)
+    brightness(1);
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+  height: 100vh;
+}
+
 .line {
   height: 0.125rem;
   width: 100%;
@@ -34,6 +46,16 @@ body {
   background-color: gray;
   margin-top: 0rem;
   margin-bottom: 1rem;
+}
+
+.about-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.about-container > * {
+  width: 100%;
 }
 
 .portrait {
@@ -45,11 +67,6 @@ body {
   box-shadow: 0px 0px 15px grey;
   margin-bottom: 1rem;
   margin-right: 1rem;
-}
-
-.about-container {
-  display: flex;
-  justify-content: start;
 }
 
 .project-image {
@@ -167,19 +184,29 @@ body {
 }
 
 .project-background.shop {
-  background-image: url("../images/cart.jpg");
+  background: url("../images/cart.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.infoscreen {
-  background-image: url("../images/infoscreen.jpg");
+  background: url("../images/infoscreen.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.game {
-  background-image: url("../images/spel.jpg");
+  background: url("../images/spel.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.react {
-  background-image: url("../images/react.jpg");
+  background: url("../images/react.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.te4-site {
-  background-image: url("../images/te4-working.png");
+  background: url("../images/te4-working.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .contact-link {
@@ -196,8 +223,13 @@ body {
 @media screen and (min-width: 700px) {
   /* Mellan 700px och 1200px */
   .video-container {
+    width: 100%;
     display: flex;
     justify-content: start;
+  }
+
+  .video-container > div {
+    width: 100%;
   }
 
   .presentation-container {

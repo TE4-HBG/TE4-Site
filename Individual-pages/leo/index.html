@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../individual.css" />
+
+    <title>Leo Kordelin Öhlander - TE4 Site 22/23</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../te4-logo-dark_white_bg.ico"
+      type="image/x-icon"
+    />
+
+    <style>
+      :root {
+        --rainbow: linear-gradient(
+          to left,
+          hsl(0deg, 100%, 50%),
+          hsl(22.5deg, 100%, 50%),
+          hsl(45deg, 100%, 50%),
+          hsl(67.5deg, 100%, 50%),
+          hsl(112.5deg, 100%, 50%),
+          hsl(135deg, 100%, 50%),
+          hsl(157.5deg, 100%, 50%),
+          hsl(180deg, 100%, 50%),
+          hsl(202.5deg, 100%, 50%),
+          hsl(225deg, 100%, 50%),
+          hsl(247.5deg, 100%, 50%),
+          hsl(270deg, 100%, 50%),
+          hsl(292.5deg, 100%, 50%),
+          hsl(315deg, 100%, 50%),
+          hsl(337.5deg, 100%, 50%),
+          hsl(360deg, 100%, 50%)
+        );
+        --rainbow50: linear-gradient(
+          to left,
+          hsl(0deg, 100%, 50%, 0.5),
+          hsl(22.5deg, 100%, 50%, 0.5),
+          hsl(45deg, 100%, 50%, 0.5),
+          hsl(67.5deg, 100%, 50%, 0.5),
+          hsl(112.5deg, 100%, 50%, 0.5),
+          hsl(135deg, 100%, 50%, 0.5),
+          hsl(157.5deg, 100%, 50%, 0.5),
+          hsl(180deg, 100%, 50%, 0.5),
+          hsl(202.5deg, 100%, 50%, 0.5),
+          hsl(225deg, 100%, 50%, 0.5),
+          hsl(247.5deg, 100%, 50%, 0.5),
+          hsl(270deg, 100%, 50%, 0.5),
+          hsl(292.5deg, 100%, 50%, 0.5),
+          hsl(315deg, 100%, 50%, 0.5),
+          hsl(337.5deg, 100%, 50%, 0.5),
+          hsl(360deg, 100%, 50%, 0.5)
+        );
+      }
+      .link.cool-link {
+        color: hsl(292.5deg, 100%, 50%);
+      }
+      .rainbow-icon > .contact-link {
+        filter: grayscale(1) contrast(1) brightness(10);
+      }
+      .rainbow-icon:hover > .contact-link {
+        filter: grayscale(0) contrast(1) brightness(1) saturate(2);
+        transition: filter 200ms linear 0s;
+      }
+      .link.cool-link::after {
+        display: inline-block;
+        height: 14px;
+        aspect-ratio: 1/1;
+        background-image: url("secret-link.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link.cool-link.github::before {
+        display: inline-block;
+        height: 18px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/github-icon-purple.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link::after {
+        display: inline-block;
+        height: 14px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/link-icon.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link.github::before {
+        display: inline-block;
+        height: 18px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/github-icon.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      #activator {
+        user-select: none;
+      }
+      .rainbow-div.project-background {
+        background: var(--rainbow50);
+      }
+      .switcharooer {
+        display: grid !important;
+        grid-auto-columns: 1fr;
+        gap: 0;
+        padding: 0 !important;
+      }
+      .rainbow-link {
+        color: transparent;
+        background: var(--rainbow);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .whiter {
+        color: white;
+      }
+      .switcharooer > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+      .nopacity {
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      .cool-guy {
+        background-image: url("../../images/Leo.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .activator-anim {
+        background-image: url("./klohger.png");
+        image-rendering: pixelated;
+        box-shadow: 0px 0px 0px transparent;
+        aspect-ratio: 1/1 !important;
+        border-radius: 0rem;
+        transition: aspect-ratio 2s, background-image 2s, box-shadow 2s,
+          border-radius 2s;
+      }
+
+      .background-anim {
+        background-color: rgba(22, 0, 35, 255) !important;
+
+        transition: background-color 2s;
+      }
+      .cool-text::before {
+        white-space: pre;
+        content: "Leo Kordelin Öhlander";
+        animation-name: test1;
+        animation-duration: 4s;
+        animation-delay: 1.5s;
+        animation-iteration-count: 1;
+        animation-play-state: paused;
+        animation-fill-mode: forwards;
+      }
+      .rainbow-div {
+        background: var(--rainbow);
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .rainbow-text {
+        color: transparent;
+        background: var(--rainbow);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .rainbow-text > li::marker {
+        height: 1000px;
+      }
+      .lack-of-rizz {
+        display: none;
+      }
+      .switcharooer > *.alt {
+        animation: shmove2 5s linear infinite;
+      }
+      .switcharooer > *.small {
+        background-size: 50% 100%;
+      }
+      .switcharooer.project-background > * {
+        height: 100%;
+      }
+      @keyframes test1 {
+        0% {
+          content: "Leo Kordelin Öhlander";
+        }
+        2.94117647059% {
+          content: "eo KLordelin Öhlander";
+        }
+        5.88235294118% {
+          content: "eo KLordelin Öhlander";
+        }
+        8.82352941176% {
+          content: "eo KLordelin Öhlander";
+        }
+        11.7647058824% {
+          content: "o KLordelin Öhlander";
+        }
+        14.7058823529% {
+          content: "KLordelin Öhlander";
+        }
+        17.6470588235% {
+          content: "KLordelin Öhlander";
+        }
+        20.5882352941% {
+          content: "KLodelin Öhlander";
+        }
+        23.5294117647% {
+          content: "KLoelin Öhlander";
+        }
+        26.4705882353% {
+          content: "KLolin Öhlander";
+        }
+        29.4117647059% {
+          content: "KLoin Öhlander";
+        }
+        32.3529411765% {
+          content: "KLon Öhlander";
+        }
+        35.2941176471% {
+          content: "KLo Öhlander";
+        }
+        38.2352941176% {
+          content: "KLo Öhlander";
+        }
+        41.1764705882% {
+          content: "KLo hlander";
+        }
+        44.1176470588% {
+          content: "KLo hander";
+        }
+        47.0588235294% {
+          content: "KLo hnder";
+        }
+        50% {
+          content: "KLo hder";
+        }
+        52.9411764706% {
+          content: "KLo her";
+        }
+        55.8823529412% {
+          content: "KLoher";
+        }
+        58.8235294118% {
+          content: "KLoher";
+        }
+        61.7647058824% {
+          content: "KLohger";
+        }
+        100% {
+          content: "KLohger";
+        }
+      }
+      .pacity {
+        opacity: 100%;
+        transition: opacity 2s;
+      }
+      .swag::before {
+        animation-play-state: running !important;
+      }
+      @keyframes shmove {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: -100% 0%;
+        }
+      }
+      @keyframes shmove2 {
+        0% {
+          background-position: -50% 0%;
+        }
+        100% {
+          background-position: -150% 0%;
+        }
+      }
+
+      .project-contributions-container > a > div > * > ul {
+        padding: 0;
+        text-align: start;
+      }
+      .background-blur-anim {
+        backdrop-filter: blur(0rem) invert(100%) hue-rotate(145deg)
+          saturate(1.5) brightness(0.25);
+        transition: backdrop-filter 2s;
+      }
+      .music-shown {
+        top: 0 !important;
+        transition: top 2s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+    <div
+      id="music-player"
+      style="
+        z-index: 100;
+        position: fixed;
+        display: flex;
+        background-color: rgb(22, 0, 35);
+        border: 1rem solid white;
+        top: -50vh;
+        left: calc(100vw - 20rem);
+        align-items: center;
+      "
+    >
+      <div
+        id="music-slidey-back"
+        style="
+          width: 1.5rem;
+          height: 8rem;
+          margin: 0 2rem;
+          background: indigo;
+          image-rendering: pixelated;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
+        <div
+          id="music-slidey"
+          style="
+            width: 3rem;
+            height: 3rem;
+            background: url('music-volume-slider.png');
+
+            translate: -25% -25%;
+          "
+        ></div>
+      </div>
+      <div
+        id="music-button"
+        style="
+          margin: 2.5rem;
+          margin-left: 0;
+          margin-right: 1.25rem;
+          width: 7.5rem;
+
+          aspect-ratio: 1/1;
+          background-image: url('music-pause.png');
+          background-size: contain;
+          background-position: center;
+          image-rendering: pixelated;
+          background-repeat: no-repeat;
+        "
+      ></div>
+    </div>
+    -->
+    <div id="background-blur" class="blurrer"></div>
+    <div class="project-container">
+      <div class="switcharooer">
+        <h1 class="cool-text"></h1>
+        <h1 class="rainbow-text cool-text lack-of-rizz"></h1>
+      </div>
+
+      <!--Ditt namn (För och efternamn)-->
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz" disabled></div>
+      </div>
+      <div class="switcharooer">
+        <h2>Om mig</h2>
+        <h2 class="rainbow-text lack-of-rizz">Om mig</h2>
+      </div>
+      <div class="about-container">
+        <div
+          id="activator"
+          src="../../images/Leo.png"
+          class="portrait pointer cool-guy"
+          onclick="
+      if (!activated) {
+        activated = true
+        PlayAudio();
+        //document.getElementById('music-player').classList.add('music-shown');
+
+
+        let classlist = document.getElementById('activator').classList.remove('pointer')
+        
+
+        document.getElementById('activator').classList.add('activator-anim')
+        
+        document.getElementById('background-blur').classList.add('background-blur-anim' )
+
+        classlist = document.getElementsByClassName('project-container').item(0).classList.add('background-anim')
+
+        const switcharooers = document.getElementsByClassName('switcharooer')
+
+        for (let i = 0; i < switcharooers.length; i++) {
+          const element = switcharooers.item(i);
+
+          const children = element.children;
+          children.item(0).classList.add('nopacity', 'swag')
+          children.item(1).classList.remove('lack-of-rizz')
+          setTimeout(() => {
+            children.item(1).classList.add('pacity', 'swag')
+          }, 100);
+          
+        }
+        const links = document.getElementsByClassName('link');
+        for (let i = 0; i < links.length; i++) {
+          links.item(i).classList.add('cool-link')
+        }
+
+      }
+      "
+        ></div>
+        <!--Rätt bild (../images/)-->
+        <div class="switcharooer">
+          <h3>Jag gillar att skapa.</h3>
+          <h3 class="whiter lack-of-rizz">Jag gillar att skapa.</h3>
+        </div>
+
+        <!--Skriv en kort text om dig och lägg in-->
+      </div>
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
+      </div>
+      <div class="switcharooer">
+        <h2>Mina projekt-bidrag</h2>
+        <h2 class="rainbow-text lack-of-rizz">Mina projekt-bidrag</h2>
+      </div>
+      <div class="project-contributions-container">
+        <a href="../../Projects/Project1/papershop.html">
+          <!--Vilket projekt i Project1 mappen-->
+          <div>
+            <h2>Webbshop</h2>
+            <ul>
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="switcharooer project-background">
+            <div
+              class="project-background shop"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background shop rainbow-div small lack-of-rizz"
+            ></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project2/infoskärm.html">
+          <div>
+            <h2>Infoskärm</h2>
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="switcharooer project-background">
+            <div
+              class="project-background infoscreen"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background infoscreen rainbow-div small lack-of-rizz"
+            ></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project3/rat-on-the-run.html">
+          <!--Vilket projekt i Project3 mappen-->
+          <div>
+            <h2>Rat on the run</h2>
+            <ul>
+              <li><h3>GruppLedare</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
+          </div>
+          <div class="switcharooer project-background">
+            <div
+              class="project-background game"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background game rainbow-div small lack-of-rizz"
+            ></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+
+        <a href="../../Projects/Project4/nobelpriser.html">
+          <!--Vilket projekt i Project4 mappen-->
+          <div>
+            <h2>Nobelfinder</h2>
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Frontend Styling</h3></li>
+              <li><h3>API-hantering</h3></li>
+            </ul>
+          </div>
+          <div class="switcharooer project-background">
+            <div
+              class="project-background react"
+              style="opacity: 1 !important"
+            ></div>
+            <div
+              class="project-background react rainbow-div small lack-of-rizz"
+            ></div>
+          </div>
+          <div class="blurrer"></div>
+        </a>
+      </div>
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
+      </div>
+      <div class="switcharooer">
+        <h2>Individuellt projekt</h2>
+        <h2 class="rainbow-text lack-of-rizz">Individuellt projekt</h2>
+      </div>
+      <div class="video-container">
+        <video aria-colspan="individual-video" controls class="project-video">
+          <source src="./individuell.mp4" type="video/mp4" />
+          <div class="switcharooer">
+            <h3>
+              Your browser can not display this video. <br />
+              Cringe.
+            </h3>
+            <h3 class="whiter lack-of-rizz">
+              Your browser can not display this video. <br />
+              Cringe.
+            </h3>
+          </div>
+        </video>
+        <div>
+          <div class="switcharooer">
+            <h3>
+              Originellt skulle jag göra en klon av candy crush i en egen
+              spelmotor, men all funktionalitet jag ville implementera insåg jag
+              var alltför mycket för den tidsram jag hade. <br />
+              Eftersom jag redan hade gjort en del av spelmotorn, så bestämmde
+              jag att istället utveckla den och presentera den istället.
+            </h3>
+            <h3 class="whiter lack-of-rizz">
+              Originellt skulle jag göra en klon av candy crush i en egen
+              spelmotor, men all funktionalitet jag ville implementera insåg jag
+              var alltför mycket för den tidsram jag hade. <br />
+              Eftersom jag redan hade gjort en del av spelmotorn, så bestämmde
+              jag att istället utveckla den och presentera den istället.
+            </h3>
+          </div>
+          <p>
+            <a
+              href="https://github.com/Klohger/PlayMotor"
+              class="link github"
+              target="_blank"
+            >
+              Github
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
+      </div>
+      <div class="switcharooer">
+        <h2>Examensarbete</h2>
+        <h2 class="rainbow-text lack-of-rizz">Examensarbete</h2>
+      </div>
+      <div class="video-container">
+        <img class="project-video" src="./graph.svg" />
+
+        <div>
+          <div class="switcharooer">
+            <h3>
+              Till mitt examensarbete jämförde jag det traditionella sättet att
+              överföra animations-data till gpun, med ett nytt sätt jag skälv
+              kom på för några år sen.
+            </h3>
+            <h3 class="whiter lack-of-rizz">
+              Till mitt examensarbete jämförde jag det traditionella sättet att
+              överföra animations-data till gpun, med ett nytt sätt jag skälv
+              kom på för några år sen.
+            </h3>
+          </div>
+          <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
+          <p>
+            <a href="" class="link" target="_blank"> Rapport </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
+      </div>
+      <div class="switcharooer">
+        <h2>Certifikat</h2>
+        <h2 class="rainbow-text lack-of-rizz">Certifikat</h2>
+      </div>
+      <div class="switcharooer">
+        <p>Följande certifikat har jag tagit</p>
+        <p class="whiter lack-of-rizz">Följande certifikat har jag tagit</p>
+      </div>
+      <div class="switcharooer">
+        <ul>
+          <li><p>Information Technology Security (ITS) in Java</p></li>
+          <li><p>Information Technology Security (ITS) in JavaScript</p></li>
+        </ul>
+        <ul class="whiter lack-of-rizz">
+          <li><p>Information Technology Security (ITS) in Java</p></li>
+          <li><p>Information Technology Security (ITS) in JavaScript</p></li>
+        </ul>
+      </div>
+
+      <div class="switcharooer">
+        <div class="line"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
+      </div>
+      <div class="switcharooer">
+        <p>
+          Kontakta mig gärna på linkedin eller kika på några av mina projekt på
+          github!
+        </p>
+        <p class="whiter lack-of-rizz">
+          Kontakta mig gärna på linkedin eller kika på några av mina projekt på
+          github!
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <!--Länka till din linkedIn profil-->
+        <a
+          href="https://www.linkedin.com/in/leo-kordelin-%C3%B6hlander-0321b1249/"
+          target="_blank"
+        >
+          <img src="../../images/linkedIn-logo.png" class="contact-link" />
+        </a>
+        <div class="switcharooer">
+          <a href="https://github.com/Klohger" target="_blank">
+            <img
+              src="../../images/github-icon-purple.png"
+              class="contact-link"
+            />
+          </a>
+          <a
+            class="rainbow-icon lack-of-rizz"
+            href="https://github.com/Klohger"
+            target="_blank"
+          >
+            <img
+              src="../../images/github-icon-purple.png"
+              class="contact-link"
+            />
+          </a>
+        </div>
+        <!--Länka till ditt privata github konto-->
+      </div>
+    </div>
+  </body>
+  <script>
+    /*
+    let selected = false;
+    const slideyBack = document.getElementById("music-slidey-back");
+    const slidey = document.getElementById("music-slidey");
+    slidey.onmousedown = (e) => (selected = true);
+    slidey.onmouseup = (e) => (selected = false);
+    window.onmousemove = (ev, huh) => {
+      if (selected) {
+        console.log("shmoved", slideyBack.clientHeight, slideyBack.client);
+      }
+    };
+    */
+    let activated = false;
+    let audioShouldPlay = false;
+    let audioIsCool = false;
+
+    const audio = new Audio("JAVA_01.OGG");
+
+    audio.loop = true;
+    audio.oncanplay = async (e) => {
+      e.preventDefault();
+      if (audioShouldPlay && !audioIsCool) {
+        await audio.play();
+      }
+      audioIsCool = true;
+    };
+    function PlayAudio() {
+      if (audioIsCool) {
+        audio
+          .play()
+          .catch((err) =>
+            console.error("OH SHIT OH FUCK THE AUDIO DIDN'T", err)
+          );
+      } else {
+        audioShouldPlay = true;
+      }
+    }
+    audio.onplay = (e) => e.preventDefault();
+    audio.onpause = (e) => e.preventDefault();
+  </script>
+</html>
