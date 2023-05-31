@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../individual.css" />
+
     <title>Leo Kordelin Öhlander - TE4 Site 22/23</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../te4-logo-dark_white_bg.ico"
+      type="image/x-icon"
     />
 
     <style>
@@ -33,18 +39,76 @@
           hsl(360deg, 100%, 50%)
         );
       }
-
+      .link.cool-link {
+        color: hsl(292.5deg, 100%, 50%);
+      }
+      .rainbow-icon > .contact-link {
+        filter: grayscale(1) contrast(1) brightness(10);
+      }
+      .rainbow-icon:hover > .contact-link {
+        filter: grayscale(0) contrast(1) brightness(1) saturate(2);
+        transition: filter 200ms linear 0s;
+      }
+      .link.cool-link::after {
+        display: inline-block;
+        height: 14px;
+        aspect-ratio: 1/1;
+        background-image: url("secret-link.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link.cool-link.github::before {
+        display: inline-block;
+        height: 18px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/github-icon-purple.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link::after {
+        display: inline-block;
+        height: 14px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/link-icon.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
+      .link.github::before {
+        display: inline-block;
+        height: 18px;
+        aspect-ratio: 1/1;
+        background-image: url("../../images/github-icon.png");
+        background-size: cover;
+        background-position: center;
+        content: "";
+      }
       #activator {
         user-select: none;
       }
 
-      .rainbower {
+      .switcharooer {
         display: grid !important;
         grid-auto-columns: 1fr;
         gap: 0;
         padding: 0 !important;
       }
-      .rainbower > * {
+      .rainbow-link {
+        color: transparent;
+        background: var(--rainbow);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        background-size: 25% 100%;
+        animation: shmove 5s linear infinite;
+        opacity: 0;
+      }
+      .whiter {
+        color: white;
+      }
+      .switcharooer > * {
         grid-column: 1;
         grid-row: 1;
       }
@@ -86,14 +150,12 @@
         animation-fill-mode: forwards;
       }
       .rainbow-div {
-        z-index: 1;
         background: var(--rainbow);
         background-size: 25% 100%;
         animation: shmove 5s linear infinite;
         opacity: 0;
       }
       .rainbow-text {
-        z-index: 1;
         color: transparent;
         background: var(--rainbow);
         -webkit-background-clip: text;
@@ -103,13 +165,19 @@
         animation: shmove 5s linear infinite;
         opacity: 0;
       }
-      .rainbower > *.alt {
+      .rainbow-text > li::marker {
+        height: 1000px;
+      }
+      .lack-of-rizz {
+        display: none;
+      }
+      .switcharooer > *.alt {
         animation: shmove2 5s linear infinite;
       }
-      .rainbower > *.small {
+      .switcharooer > *.small {
         background-size: 50% 100%;
       }
-      .rainbower.project-background > * {
+      .switcharooer.project-background > * {
         height: 100%;
       }
       @keyframes test1 {
@@ -212,7 +280,7 @@
         text-align: start;
       }
       .background-blur-anim {
-        backdrop-filter: blur(0rem) invert(100%) hue-rotate(145deg) 
+        backdrop-filter: blur(0rem) invert(100%) hue-rotate(145deg)
           saturate(1.5) brightness(0.25);
         transition: backdrop-filter 2s;
       }
@@ -222,20 +290,20 @@
   <body>
     <div id="background-blur" class="blurrer"></div>
     <div class="project-container">
-      <div class="rainbower">
+      <div class="switcharooer">
         <h1 class="cool-text"></h1>
-        <h1 class="rainbow-text cool-text"></h1>
+        <h1 class="rainbow-text cool-text lack-of-rizz"></h1>
       </div>
 
       <!--Ditt namn (För och efternamn)-->
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz" disabled></div>
       </div>
-      <div class="rainbower">
+      <div class="switcharooer">
         <h2>Om mig</h2>
-        <h2 class="rainbow-text">Om mig</h2>
+        <h2 class="rainbow-text lack-of-rizz">Om mig</h2>
       </div>
       <div class="about-container">
         <div
@@ -253,82 +321,76 @@
 
         classlist = document.getElementsByClassName('project-container').item(0).classList.add('background-anim')
 
-        const rainbowers = document.getElementsByClassName('rainbower')
+        const switcharooers = document.getElementsByClassName('switcharooer')
 
-        for (let i = 0; i < rainbowers.length; i++) {
-          const element = rainbowers.item(i);
+        for (let i = 0; i < switcharooers.length; i++) {
+          const element = switcharooers.item(i);
 
           const children = element.children;
           children.item(0).classList.add('nopacity', 'swag')
-          children.item(1).classList.add('pacity', 'swag')
+          children.item(1).classList.remove('lack-of-rizz')
+          setTimeout(() => {
+            children.item(1).classList.add('pacity', 'swag')
+          }, 100);
+          
         }
+        const links = document.getElementsByClassName('link');
+        for (let i = 0; i < links.length; i++) {
+          links.item(i).classList.add('cool-link')
+        }
+
       }
       "
         ></div>
         <!--Rätt bild (../images/)-->
-        <div class="rainbower">
+        <div class="switcharooer">
           <h3>Jag gillar att skapa.</h3>
-          <h3 class="rainbow-text small">Jag gillar att skapa.</h3>
+          <h3 class="whiter lack-of-rizz">Jag gillar att skapa.</h3>
         </div>
 
         <!--Skriv en kort text om dig och lägg in-->
       </div>
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
       </div>
-      <div class="rainbower">
+      <div class="switcharooer">
         <h2>Mina projekt-bidrag</h2>
-        <h2 class="rainbow-text">Mina projekt-bidrag</h2>
+        <h2 class="rainbow-text lack-of-rizz">Mina projekt-bidrag</h2>
       </div>
       <div class="project-contributions-container">
         <a href="../../Projects/Project1/papershop.html">
           <!--Vilket projekt i Project1 mappen-->
           <div>
-            <div class="rainbower">
-              <h2>Webbshop</h2>
-              <h2 class="rainbow-text alt small">Webbshop</h2>
-            </div>
-            <!--Rätt rubrik (Traktorshop, Papershop eller Skohemsida)-->
-            <div class="rainbower">
-              <ul>
-                <li><h3>Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-              <ul class="rainbow-text alt small">
-                <li><h3>Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-            </div>
+            <h2>Webbshop</h2>
+            <ul>
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
           </div>
-          <div class="rainbower project-background">
+          <div class="switcharooer project-background">
             <div class="project-background shop"></div>
-            <div class="project-background rainbow-div small"></div>
+            <div
+              class="project-background rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
 
         <a href="../../Projects/Project2/infoskärm.html">
           <div>
-            <div class="rainbower">
-              <h2>Infoskärm</h2>
-              <h2 class="rainbow-text alt small">Infoskärm</h2>
-            </div>
-            <div class="rainbower">
-              <ul>
-                <li><h3>Backend Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-              <ul class="rainbow-text alt small">
-                <li><h3>Backend Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-            </div>
+            <h2>Infoskärm</h2>
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
           </div>
-          <div class="rainbower project-background">
+          <div class="switcharooer project-background">
             <div class="project-background infoscreen"></div>
-            <div class="project-background rainbow-div small"></div>
+            <div
+              class="project-background rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
@@ -336,28 +398,19 @@
         <a href="../../Projects/Project3/rat-on-the-run.html">
           <!--Vilket projekt i Project3 mappen-->
           <div>
-            <div class="rainbower">
-              <h2>Rat on the run</h2>
-              <h2 class="rainbow-text alt small">Rat on the run</h2>
-            </div>
-            <div class="rainbower">
-              <ul>
-                <li><h3>GruppLedare</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-                <li><h3>Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-              <ul class="rainbow-text alt small">
-                <li><h3>GruppLedare</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-                <li><h3>Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-              </ul>
-            </div>
+            <h2>Rat on the run</h2>
+            <ul>
+              <li><h3>GruppLedare</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+            </ul>
           </div>
-          <div class="rainbower project-background">
+          <div class="switcharooer project-background">
             <div class="project-background game"></div>
-            <div class="project-background rainbow-div small"></div>
+            <div
+              class="project-background rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
@@ -365,43 +418,48 @@
         <a href="../../Projects/Project4/nobelpriser.html">
           <!--Vilket projekt i Project4 mappen-->
           <div>
-            <div class="rainbower">
-              <h2>Nobelfinder</h2>
-              <h2 class="rainbow-text alt small">Nobelfinder</h2>
-            </div>
-            <div class="rainbower">
-              <ul></ul>
-              <ul class="rainbow-text alt small">
-                <li><h3>Backend Kodning</h3></li>
-                <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
-                <li><h3>Frontend Styling</h3></li>
-                <li><h3>API-hantering</h3></li>
-              </ul>
-            </div>
+            <h2>Nobelfinder</h2>
+            <ul>
+              <li><h3>Backend Kodning</h3></li>
+              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
+              <li><h3>Frontend Styling</h3></li>
+              <li><h3>API-hantering</h3></li>
+            </ul>
           </div>
-          <div class="rainbower project-background">
+          <div class="switcharooer project-background">
             <div class="project-background react"></div>
-            <div class="project-background rainbow-div small"></div>
+            <div
+              class="project-background rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
       </div>
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
       </div>
-      <div class="rainbower">
+      <div class="switcharooer">
         <h2>Individuellt projekt</h2>
-        <h2 class="rainbow-text">Individuellt projekt</h2>
+        <h2 class="rainbow-text lack-of-rizz">Individuellt projekt</h2>
       </div>
       <div class="video-container">
         <video aria-colspan="individual-video" controls class="project-video">
           <source src="./individuell.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <div class="switcharooer">
+            <h3>
+              Your browser can not display this video. <br />
+              Cringe.
+            </h3>
+            <h3 class="whiter lack-of-rizz">
+              Your browser can not display this video. <br />
+              Cringe.
+            </h3>
+          </div>
         </video>
         <div>
-          <div class="rainbower">
+          <div class="switcharooer">
             <h3>
               Originellt skulle jag göra en klon av candy crush i en egen
               spelmotor, men all funktionalitet jag ville implementera insåg jag
@@ -409,7 +467,7 @@
               Eftersom jag redan hade gjort en del av spelmotorn, så bestämmde
               jag att istället utveckla den och presentera den istället.
             </h3>
-            <h3 class="rainbow-text">
+            <h3 class="whiter lack-of-rizz">
               Originellt skulle jag göra en klon av candy crush i en egen
               spelmotor, men all funktionalitet jag ville implementera insåg jag
               var alltför mycket för den tidsram jag hade. <br />
@@ -417,86 +475,114 @@
               jag att istället utveckla den och presentera den istället.
             </h3>
           </div>
-          <div class="rainbower">
-            <a href="https://github.com/Klohger/PlayMotor" class="link" target="_blank">
-              <img src="../../../images/github-icon.png" class="github-icon" />
+          <p>
+            <a
+              href="https://github.com/Klohger/PlayMotor"
+              class="link github"
+              target="_blank"
+            >
               Github
-              <img src="../../../images/link-icon.png" class="link-icon" />
             </a>
-
-            <a href="https://github.com/Klohger/PlayMotor" class="link rainbow-text" target="_blank">
-              <img src="../../../images/github-icon.png" class="github-icon" />
-              Github
-              <img src="../../../images/link-icon.png" class="link-icon" />
-            </a>
-          </div>
+          </p>
         </div>
       </div>
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
       </div>
-      <div class="rainbower">
+      <div class="switcharooer">
         <h2>Examensarbete</h2>
-        <h2 class="rainbow-text">Examensarbete</h2>
+        <h2 class="rainbow-text lack-of-rizz">Examensarbete</h2>
       </div>
       <div class="video-container">
-        <img class="project-video" src="./graph.svg">
-        
+        <img class="project-video" src="./graph.svg" />
+
         <div>
-          <div class="rainbower">
-            <h3>Text om examensarbete...</h3>
-            <h3 class="rainbow-text">Text om examensarbete...</h3>
+          <div class="switcharooer">
+            <h3>
+              Till mitt examensarbete jämförde jag det traditionella sättet att
+              överföra animations-data till gpun, med ett nytt sätt jag skälv
+              kom på för några år sen.
+            </h3>
+            <h3 class="whiter lack-of-rizz">
+              Till mitt examensarbete jämförde jag det traditionella sättet att
+              överföra animations-data till gpun, med ett nytt sätt jag skälv
+              kom på för några år sen.
+            </h3>
           </div>
-          <!--Skriv text om ditt examensarbete och lägg in-->
-          <!--Länka Github repot för examensarbete i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
-          <p>
-            <a href="" class="link" target="_blank"
-              ><img src="../../images/github-icon.png" class="github-icon" />
-              Github <img src="../../images/link-icon.png" class="link-icon"
-            /></a>
-          </p>
           <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
           <p>
-            <a href="" class="link" target="_blank">
-              Rapport <img src="../../images/link-icon.png" class="link-icon"
-            /></a>
+            <a href="" class="link" target="_blank"> Rapport </a>
           </p>
         </div>
       </div>
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
       </div>
-      <div class="rainbower">
+      <div class="switcharooer">
         <h2>Certifikat</h2>
-        <h2 class="rainbow-text">Certifikat</h2>
+        <h2 class="rainbow-text lack-of-rizz">Certifikat</h2>
       </div>
-      <p>Följande certifikat har jag tagit</p>
-      <ul>
-        <li><p>ITS - Software Development</p></li>
-        <!--Vilka certifikat har du tagit (Om du inte tagit några ta bort hela detta segment, från rad 111 till 116)-->
-      </ul>
+      <div class="switcharooer">
+        <p>Följande certifikat har jag tagit</p>
+        <p class="whiter lack-of-rizz">Följande certifikat har jag tagit</p>
+      </div>
+      <div class="switcharooer">
+        <ul>
+          <li><p>Information Technology Security (ITS) in Java</p></li>
+          <li><p>Information Technology Security (ITS) in JavaScript</p></li>
+        </ul>
+        <ul class="whiter lack-of-rizz">
+          <li><p>Information Technology Security (ITS) in Java</p></li>
+          <li><p>Information Technology Security (ITS) in JavaScript</p></li>
+        </ul>
+      </div>
 
-      <div class="rainbower">
+      <div class="switcharooer">
         <div class="line"></div>
-        <div class="line rainbow-div"></div>
+        <div class="line rainbow-div lack-of-rizz"></div>
       </div>
-      <p>
-        Kontakta mig gärna på linkedin eller kika på några av mina projekt på
-        github!
-      </p>
-      <div>
+      <div class="switcharooer">
+        <p>
+          Kontakta mig gärna på linkedin eller kika på några av mina projekt på
+          github!
+        </p>
+        <p class="whiter lack-of-rizz">
+          Kontakta mig gärna på linkedin eller kika på några av mina projekt på
+          github!
+        </p>
+      </div>
+
+      <div style="display: flex">
         <!--Länka till din linkedIn profil-->
-        <a href="" target="_blank"
-          ><img src="../../images/linkedIn-logo.png" class="contact-link"
-        /></a>
+        <a
+          href="https://www.linkedin.com/in/leo-kordelin-%C3%B6hlander-0321b1249/"
+          target="_blank"
+        >
+          <img src="../../images/linkedIn-logo.png" class="contact-link" />
+        </a>
+        <div class="switcharooer">
+          <a href="https://github.com/Klohger" target="_blank">
+            <img
+              src="../../images/github-icon-purple.png"
+              class="contact-link"
+            />
+          </a>
+          <a
+            class="rainbow-icon lack-of-rizz"
+            href="https://github.com/Klohger"
+            target="_blank"
+          >
+            <img
+              src="../../images/github-icon-purple.png"
+              class="contact-link"
+            />
+          </a>
+        </div>
         <!--Länka till ditt privata github konto-->
-        <a href="" target="_blank"
-          ><img src="../../images/github-icon-purple.png" class="contact-link"
-        /></a>
       </div>
     </div>
   </body>
@@ -511,15 +597,13 @@
     audio.oncanplay = async (e) => {
       e.preventDefault();
       if (audioShouldPlay && !audioIsCool) {
-        console.log("pog2");
         await audio.play();
       }
       audioIsCool = true;
     };
     function PlayAudio() {
       if (audioIsCool) {
-        console.log("pog");
-        audio.play();
+        audio.play().catch((err) => console.error("OH SHIT OH FUCK THE AUDIO DIDN'T", err));
       } else {
         audioShouldPlay = true;
       }
