@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet" />
-
+    <link rel="shortcut icon" href="te4-logo-dark_white_bg.ico" type="image/x-icon">
 
     <title>TE4 Portfolio 22/23 - Gymnasieingenjör Mjukvarudesign</title>
     <meta name="description" content="TE4 årskurs 2022 - 2023 portfolio sida. Läs mer om studenterna, deras prestationer, företagsbesök, presentationer och vad som har hänt under läsåret. ">
@@ -14,14 +14,14 @@
     
     <div id="main-container">
         <nav class="navbar center-y-axis">
-            <a href="https://www.ntigymnasiet.se/program/mjukvarudesign/helsingborg/" class="inherit-height">
-                <img  data-lazyloaded="1" src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg" data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg">
+            <a href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/" class="inherit-height">
+                <img  data-lazyloaded="1" src="images/nti.svg" data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg">
                         </a>
             <div class="navbar-link-div">
-                <a href="#projects" class="navbar-link">Projekt</a>
+                <a href="#Projekt" class="navbar-link">Projekt</a>
                 <a href="#about" class="navbar-link">Om Te4</a>
                 <a href="#elever" class="navbar-link">Elever</a>
-                <a href="#supervisors" class="navbar-link">Handledare</a>
+                <a href="#teachers" class="navbar-link">Handledare</a>
             </div>
             <a href="https://www.linkedin.com/company/te-4-nti-gymnasiet-helsingborg/" class="linkedIn-logo">
                 <img src="images/linkedIn-logo.png" class="inherit-height" />
@@ -40,117 +40,171 @@
             </div>
         </div>
         <br>
-        <!--projekt-->
-            <h2 id="projects" class="center" title="Projekt">Projekt</h2>
-            <div id="projekts" class="container-width">
-                <br>
-                <div id="projeks-container">
-                    <div class="projekt" onclick="showModal('myModal')">
-                        <h3>Webbshop</h3>
-                        <img src="images/cart.jpg" alt="">
-                    </div>
-                    <div class="projekt" onclick="showModal('myModal-infoskärm')">
-                        <h3>Infoskärm</h3>
-                        <img src="images/infoscreen.jpg" alt="">
-                    </div>
-                    <div class="projekt" onclick="showModal('myModal-spel')">
-                        <h3>Unity Spel</h3>
-                        <img src="images/spel.jpg" alt="">
-                    </div>
-                    <div class="projekt" onclick="showModal('myModal-react')">
-                        <h3>React API site</h3>
-                        <img src="images/react.jpg" alt="">
-                    </div>
-                    <div class="projekt" onclick="showModal('myModal-site')">
-                        <h3>Denna sidan!</h3>
-                        <img src="images/react.jpg" alt="">
-                    </div>
+    <!--projekt-->
+        <h2 id="Projekt" class="center" title="Projekt">Projekt</h2>
+        <div id="projekts" class="container-width">
+            <br>
+            <div id="projeks-container">
+                <div class="projekt" onclick="showModal('myModal')">
+                    <h3>Webbshop</h3>
+                    <img src="images/cart.jpg" alt="">
                 </div>
-            </div>
-            <div id="about">
-                <br>
-                <h2 title="About" class="center">Om oss</h2>
-                <div id="about-box" class="container-width">
-                    <p>Ett tekniskt fjärde år är en utbildning på ett år där eleverna blir gymnasieingenjörer inom en viss inriktning. På NTI i Helsingborg blir man gymnasieingenjör inom mjukvarudesign. Detta innebär allt som har med design av mjukvara att göra. Under året får man chansen att jobba i projekt, vilket ger eleverna en bra inblick i hur det fungerar ute i arbetslivet. Kurserna som ska läsas under året bakas därför in i projekten. Kurserna är bland annat programmering 3 och tillämpad programmering. Eleverna får även testa på olika planeringsmetoder och gruppstrukturer. </p>
-                    
-                    <p>Detta år har det satsats mycket på att lära sig olika verktyg som används ute på företagen såsom bland annat agilt planerande och React. Alla elever har även testat på olika roller i grupperna såsom bland annat projektledare, utvecklare och planeringsansvarig. Under detta året har vi dessutom varit på 10 veckors praktik. Man har fått chansen att vara 6 veckor i Sverige och 4 veckor utomlands i Valencia eller vara 10 veckor i Sverige.</p>
-
-                    <p>Om detta låter intressant så gå gärna in på vår tidslinje och läs mer om året på Te4 eller gå in på NTI Gymnasiets hemsida och läs mer <a href="https://www.ntigymnasiet.se/program/mjukvarudesign/helsingborg/">här!</a></p>
-
-                    <a id="timeline-link" href="timeline.html">Timeline</a>
+                <div class="projekt" onclick="showModal('myModal-infoskärm')">
+                    <h3>Infoskärm</h3>
+                    <img src="images/infoscreen.jpg" alt="">
                 </div>
-            </div>
-            <div id="elever">
-              <br>
-              <h2 class="center" title="Elever">Elever</h2>
-              <div class="container-width student-cards">
-                <a href="Individual-pages/tim.html">
-                  <div class="student">
-                    <img src="images/Tim.jpg" alt="Bild av eleven Tim Löfstedt">                
-                  </div>
-                  <h3 class="center student-name">Tim Löfstedt</h3>
-                </a>
-                <a href="Individual-pages/anna.html">
-                  <div class="student">
-                    <img src="images/anna-portrait.jpg" alt="Bild av eleven Anna">                
-                  </div>
-                  <h3 class="center student-name">Anna Svensson</h3>
-                </a>
-                <a href="Individual-pages/benjamin.html">
-                  <div class="student">
-                    <img src="images/benjamin.jpg" alt="Bild av eleven Benjamin">                
-                  </div>
-                  <h3 class="center student-name">Benjamin Bergstrand</h3>
-                </a>
-                <a href="Individual-pages/hugo.html">
-                  <div class="student">
-                    <img src="images/Hugo.jpg" alt="Bild av eleven Hugo">                
-                  </div>
-                  <h3 class="center student-name">Hugo Sjöholm</h3>
-                </a>
-                <a href="Individual-pages/isaac.html">
-                  <div class="student">
-                    <img src="images/Isaac.jpg" alt="Bild av eleven Isaac">                
-                  </div>
-                  <h3 class="center student-name">Isaac Högfelt</h3>
-                </a>
-                <a href="Individual-pages/isac.html">
-                  <div class="student">
-                    <img src="images/Isak.png" alt="Bild av eleven Isac">                
-                  </div>
-                  <h3 class="center student-name">Isac Alm</h3>
-                </a>
-                <a href="Individual-pages/lefteris.html">
-                  <div class="student">
-                    <img src="images/Hugo.jpg" alt="Bild av eleven Lefterris">                
-                  </div>
-                  <h3 class="center student-name">Lefteris Avramidis</h3>
-                </a>
-                <a href="Individual-pages/leo.html">
-                  <div class="student">
-                    <img src="images/Leo.jpg" alt="Bild av eleven Leo">                
-                  </div>
-                  <h3 class="center student-name">Leo Kordelin Öhlander</h3>
-                </a>
-                <a href="Individual-pages/sakda.html">
-                  <div class="student">
-                    <img src="images/sakda.jpg" alt="Bild av eleven Sakda">                
-                  </div>
-                  <h3 class="center student-name">Sakda Saleephan</h3>
-                </a>
-                <a href="">
-                  <div class="student">
-                    <img class="missing-student" src="Projects/project-images/profile.png" alt="Bild av eleven Adrian">                
-                  </div>
-                  <h3 class="center student-name">Adrian</h3>
-                </a>
-
-              </div>
-              <br>
-              <br>
-              
+                <div class="projekt" onclick="showModal('myModal-spel')">
+                    <h3>Unity Spel</h3>
+                    <img src="images/spel.jpg" alt="">
+                </div>
+                <div class="projekt" onclick="showModal('myModal-react')">
+                    <h3>React API site</h3>
+                    <img src="images/react.jpg" alt="">
+                </div>
+                <div class="projekt" onclick="showModal('myModal-site')">
+                    <h3>Denna sidan!</h3>
+                    <img src="images/te4-working.png" alt="">
+                </div>
             </div>
         </div>
+    <!--about-->
+        <div id="about">
+            <br>
+            <h2 title="About" class="center">Om Te4</h2>
+            <div id="about-box" class="container-width">
+                <p>Ett tekniskt fjärde år är en utbildning på ett år där eleverna blir gymnasieingenjörer inom en viss inriktning. På NTI i Helsingborg blir man gymnasieingenjör inom mjukvarudesign. Detta innebär allt som har med design av mjukvara att göra. Under året får man chansen att jobba i projekt, vilket ger eleverna en bra inblick i hur det fungerar ute i arbetslivet. Kurserna som ska läsas under året bakas därför in i projekten. Kurserna är bland annat programmering 3 och tillämpad programmering. Eleverna får även testa på olika planeringsmetoder och gruppstrukturer. </p>
+                
+                <p>Detta år har det satsats mycket på att lära sig olika verktyg som används ute på företagen såsom bland annat agilt planerande och React. Alla elever har även testat på olika roller i grupperna såsom bland annat projektledare, utvecklare och planeringsansvarig. Under detta året har vi dessutom varit på 10 veckors praktik. Man har fått chansen att vara 6 veckor i Sverige och 4 veckor utomlands i Valencia eller vara 10 veckor i Sverige.</p>
+
+                <p>Om detta låter intressant så gå gärna in på vår tidslinje och läs mer om året på Te4 eller gå in på NTI Gymnasiets hemsida och läs mer <a href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/" target="_blank" class="link">här! <img src="../../images/link-icon.png" class="link-icon" /></a></p>
+
+                <div id="timeline-link">
+                  <a href="timeline.html" class="link">Tidslinje</a>
+                </div>
+            </div>
+        </div>
+    <!--students-->
+        <div id="elever">
+          <br>
+          <h2 class="center" title="Elever">Elever</h2>
+          <br>
+          <div class="container-width student-cards">
+            <a href="Individual-pages/tim.html">
+              <div class="student">
+                <img src="images/Tim2.jpg" alt="Bild av eleven Tim Löfstedt">                
+              </div>
+              <h3 class="center student-name">Tim Löfstedt</h3>
+            </a>
+            <a href="Individual-pages/anna.html">
+              <div class="student">
+                <img src="images/anna-portrait.jpg" alt="Bild av eleven Anna">                
+              </div>
+              <h3 class="center student-name">Anna Svensson</h3>
+            </a>
+            <a href="Individual-pages/benjamin.html">
+              <div class="student">
+                <img src="images/benjamin.jpg" alt="Bild av eleven Benjamin">                
+              </div>
+              <h3 class="center student-name">Benjamin Bergstrand</h3>
+            </a>
+            <a href="Individual-pages/hugo.html">
+              <div class="student">
+                <img src="images/Hugo.jpg" alt="Bild av eleven Hugo">                
+              </div>
+              <h3 class="center student-name">Hugo Sjöholm</h3>
+            </a>
+            <a href="Individual-pages/isaac.html">
+              <div class="student">
+                <img src="images/isaac.jpg" alt="Bild av eleven Isaac">                
+              </div>
+              <h3 class="center student-name">Isaac Högfelt</h3>
+            </a>
+            <a href="Individual-pages/isac.html">
+              <div class="student">
+                <img src="images/Isak.png" alt="Bild av eleven Isac">                
+              </div>
+              <h3 class="center student-name">Isac Alm</h3>
+            </a>
+            <a href="Individual-pages/lefteris.html">
+              <div class="student">
+                <img src="images/Hugo.jpg" alt="Bild av eleven Lefterris">                
+              </div>
+              <h3 class="center student-name">Lefteris Avramidis</h3>
+            </a>
+            <a href="Individual-pages/leo.html">
+              <div class="student">
+                <img src="images/Leo.jpg" alt="Bild av eleven Leo">                
+              </div>
+              <h3 class="center student-name">Leo Kordelin Öhlander</h3>
+            </a>
+            <a href="Individual-pages/sakda.html">
+              <div class="student">
+                <img src="images/sakda.jpg" alt="Bild av eleven Sakda">                
+              </div>
+              <h3 class="center student-name">Sakda Saleephan</h3>
+            </a>
+            <a>
+              <div class="student">
+                <img class="missing-student" src="Projects/project-images/profile.png" alt="Bild av eleven Adrian">                
+              </div>
+              <h3 class="center student-name">Adrian</h3>
+            </a>
+
+          </div>
+          <br>
+          <br>
+          
+        </div>
+    <!--teachers-->
+        <br><br>
+        <div id="teachers">
+          <h2 title="Handledare" class="center">Handledare</h2>
+          <br>
+          <div class="container-width student-cards">
+            <a target="_blank" href="https://www.linkedin.com/in/lindawa/">
+              <div class="student">
+                <img src="images/linda-wannero-avramidou.jpg" alt="Bild av Handledaren Linda">                
+              </div>
+              <h3 style="font-size: 1.2rem;" class="center student-name">Linda Wannerö Avramidou</h3>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/josef-nobach-5578404a/">
+              <div class="student">
+                <img src="images/josef.jpg" alt="Bild av Handledaren Josef">                
+              </div>
+              <h3 class="center student-name">Josef Nobach</h3>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/mike-johansson-3a4673192/">
+              <div class="student">
+                <img src="images/mike.jpg" alt="Bild av Handledaren Mike">                
+              </div>
+              <h3 class="center student-name">Mike Johansson</h3>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/ahmed-othman-93008b21b/">
+              <div class="student">
+                <img src="images/ahmed.jpg" alt="Bild av Handledaren Ahmed">                
+              </div>
+              <h3 class="center student-name">Ahmed Othman</h3>
+            </a>
+        </div>          
+        </div>
+      <footer class="footer">
+        <div></div>
+        <a href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/">
+          <img id="footer-NTI" data-lazyloaded="1" src="images/nti.svg" data-src="images/nti.svg">
+        </a>
+      <div class="navbar-link-div">
+        <a href="#Projekt" class="navbar-link">Projekt</a>
+        <a href="#about" class="navbar-link">Om Te4</a>
+        <a href="#elever" class="navbar-link">Elever</a>
+        <a href="#teachers" class="navbar-link">Handledare</a>
+      </div>
+      <div></div>
+      <a href="https://www.linkedin.com/company/te-4-nti-gymnasiet-helsingborg/" class="linkedIn-logo">
+          <img src="images/linkedIn-logo.png" class="inherit-height" />
+      </a>
+      <div></div>
+      </footer>    
+    </div>
 
     <!-- The Modals ---------------------------- -->
     <div id="myModal" class="modal">
@@ -167,9 +221,9 @@
                 <p>Årets första projekt var en shoppingsida byggd i HTML, CSS och JavaScript. Man skulle kunna lägga in saker i en kundvagn
                 och kunna checka ut och på något sätt få ett kvitto på det man köpt. Vi delades in i tre grupper om tre. Nedan finns länkar till varje grupps projekt.
                   <br><br>
-                  <strong><a target="_blank" href="Projects/Project1/papershop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Papershop</a></strong><br>
-                  <strong><a target="_blank" href="Projects/Project1/skohemsida.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Skohemsida</a></strong><br>
-                  <strong><a target="_blank" href="Projects/Project1/traktorshop.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Traktorshop</a></strong>
+                  <strong><a href="Projects/Project1/papershop.html" class="link">Papershop</a></strong><br>
+                  <strong><a href="Projects/Project1/skohemsida.html" class="link">Skohemsida</a></strong><br>
+                  <strong><a href="Projects/Project1/traktorshop.html" class="link">Traktorshop</a></strong>
                 </p>
               </div>
           </div>
@@ -191,7 +245,7 @@
                 som ska visas upp för varje vecka samt få upp olika komponenter med information såsom busstidtabeller och väder. Alla på
                 Te4 jobbade i en stor grupp för att få fram ett resultat. Nedan finns länk till mer beskrivning om projektet.
                   <br><br>
-                  <strong><a target="_blank" href="Projects/Project2/infoskärm.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Infoskärm</a></strong>
+                  <strong><a href="Projects/Project2/infoskärm.html" class="link">Infoskärm</a></strong>
                 </p>
               </div>
           </div>
@@ -210,8 +264,8 @@
                 <p>Årets tredje projekt var att skapa ett spel i Unity. Vi hade temat “Running out of space” att utgå från. Vi delades in i
                 två grupper om fem. Resultatet blev två väldigt olika spel. Nedan finns länkar till varje grupps spel.
                   <br><br>
-                  <strong><a target="_blank" href="Projects/Project3/rat-on-the-run.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Rat on the run</a></strong><br>
-                  <strong><a target="_blank" href="Projects/Project3/run-and-jump.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Run N Jump</a></strong>
+                  <strong><a href="Projects/Project3/rat-on-the-run.html" class="link">Rat on the run</a></strong><br>
+                  <strong><a href="Projects/Project3/run-and-jump.html" class="link">Run N Jump</a></strong>
                 </p>
             </div>
         </div>
@@ -230,8 +284,8 @@
                 <p>Årets femte projekt var att skapa en hemsida i ramverket React. Vi skulle ha ett inloggningssystem samt koppla till ett
                 API. Vi delades in i två grupper om fem. Nedan finns länkar till varje grupps projekt.
                   <br><br>
-                  <strong><a target="_blank" href="Projects/Project4/gymnasieskolor.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Gymnasieskolor</a></strong><br>
-                  <strong><a target="_blank" href="Projects/Project4/nobelpriser.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Nobelpriser</a></strong>
+                  <strong><a href="Projects/Project4/gymnasieskolor.html" class="link">Gymnasieskolor</a></strong><br>
+                  <strong><a href="Projects/Project4/nobelpriser.html" class="link">Nobelpriser</a></strong>
                 </p>
               </div>
             </div>
@@ -246,12 +300,10 @@
           </div>
           <div class="modal-body">
             <div class="content">
-                <h5>21 november - 16 december 2022</h5>
-                <p>Årets femte projekt var att skapa en hemsida i ramverket React. Vi skulle ha ett inloggningssystem samt koppla till ett
-                API. Vi delades in i två grupper om fem. Nedan finns länkar till varje grupps projekt.
+                <h5>23 maj - 7 juni 2023</h5>
+                <p>Det sista projektet för året var att skapa denna sidan för att samla ihop alla projekt och andra viktiga saker som gjorts under året.
                   <br><br>
-                  <strong><a target="_blank" href="Projects/Project4/gymnasieskolor.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Gymnasieskolor</a></strong><br>
-                  <strong><a target="_blank" href="Projects/Project4/nobelpriser.html" style="color: black !important; --darkreader-inline-color: #acaaa8;" data-darkreader-inline-color="">Nobelpriser</a></strong>
+                  <a href="https://github.com/TE4-HBG/TE4-Site" class="link" target="_blank"><img src="images/github-icon.png" class="github-icon" /> Github <img src="images/link-icon.png" class="link-icon" /></a>
                 </p>
               </div>
             </div>
