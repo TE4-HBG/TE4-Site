@@ -14,14 +14,27 @@
 
 <body>
     <style>
-        .exam-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-right: 20px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06)
+        .new-content-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
-        @media screen and (width: 700px) { /*funkar inte*/
+        .left-container, .right-container {
+            width: 45%;
+            height: 100%;
+        }
+        #exam-img {
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3)
+        }
+        @media screen and (max-width: 700px) { /*funkar inte*/
             .exam-img {
+                width: 90%;
+            }
+            .new-content-container {
+                flex-direction: column-reverse!important;
+            }
+            .left-container, .right-container {
                 width: 90%;
             }
           }
@@ -151,32 +164,32 @@
 
         <div class="line"></div>
         <h2>Individuellt projekt</h2>
-        <div class="video-container">
-            <div class="img-container">
-                <img src="../images/hugo-cs-version-1.gif"/>
-                <span>Winforms version med vanlig dithering</span>
-                <img src="../images/hugo-cs-version-2.gif"/> <!--Rätt bild (../images/)-->
-                <span>Winforms version med transparency dithering</span>
-                <img src="../images/hugo-js-version.gif"/> <!--Rätt bild (../images/)-->
-                <span>JavaScript versionen</span>
+        <div class="new-content-container">
+            <div class="left-container">
+                <div class="img-container">
+                    <img src="../images/hugo-cs-version-1.gif"/>
+                    <span>Winforms version med vanlig dithering</span>
+                    <img src="../images/hugo-cs-version-2.gif"/> <!--Rätt bild (../images/)-->
+                    <span>Winforms version med transparency dithering</span>
+                    <img src="../images/hugo-js-version.gif"/> <!--Rätt bild (../images/)-->
+                    <span>JavaScript versionen</span>
+                </div>
             </div>
-            
-            <!--Rätt bild (../images/)-->
-            <div>
-                <p>För mitt induviduella projekt valde jag att göra om ett tidigare projekt fast i JavaScript. Programmet är ett verktyg so jag utvecklade för några år sedan och vars syfte är så man kan göra en GIF med transparent backgrund.</p>
-                <p>Filformatet .GIF är väldigt anvämbart och används överallt på webben, men den har en nackdel. GIF har support för transparans, men den är endast binar, altså helt genomskynlig eller inte alls.</p>
-                <p>Progamet som jag utväcklade kan ta en image-sequanze med bilder som har support för vanlig transparense (som .PNG) och med hjälp av min implumentation av floidsteingberg alghorithem emulera onlika nivåer på transparens iställer bara för att vara binär.</p>
-                <p>Mitt induviduella projekt va då att återskapa detta i JavaScript. Resultatet av detta va bra, men tyvär så ra tidien ut. I nuläget fungerar en vanlig version av floidsteingberg algorithemn men inte den speciela bara på transparans.</p>
-                <!--Länka Github repot för individuella i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
-                <p><a href="" class="link" target="_blank"><img src="../images/github-icon.png" class="github-icon" /> Github <img src="../images/link-icon.png" class="link-icon" /></a></p>
+            <div class="right-container">
+                    <p>För mitt induviduella projekt valde jag att göra om ett tidigare projekt fast i JavaScript. Programmet är ett verktyg so jag utvecklade för några år sedan och vars syfte är så man kan göra en GIF med transparent backgrund.</p>
+                    <p>Filformatet .GIF är väldigt anvämbart och används överallt på webben, men den har en nackdel. GIF har support för transparans, men den är endast binar, altså helt genomskynlig eller inte alls.</p>
+                    <p>Progamet som jag utväcklade kan ta en image-sequanze med bilder som har support för vanlig transparense (som .PNG) och med hjälp av min implumentation av floidsteingberg alghorithem emulera onlika nivåer på transparens iställer bara för att vara binär.</p>
+                    <p>Mitt induviduella projekt va då att återskapa detta i JavaScript. Resultatet av detta va bra, men tyvär så ra tidien ut. I nuläget fungerar en vanlig version av floidsteingberg algorithemn men inte den speciela bara på transparans.</p>
+                    <!--Länka Github repot för individuella i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
+                    <p><a href="" class="link" target="_blank"><img src="../images/github-icon.png" class="github-icon" /> Github <img src="../images/link-icon.png" class="link-icon" /></a></p>
             </div>
         </div>
 
         <div class="line"></div>
         <h2>Examensarbete</h2>
-        <div class="video-container">
-            <img class="exam-img" src="../images/hugo-exam.gif" alt="A animated GIF showing the site with baanced animations described in the text">
-            <div>
+        <div class="new-content-container">
+            <img id="exam-img" class="left-container" src="../images/hugo-exam.gif" alt="A animated GIF showing the site with baanced animations described in the text">
+            <div class="right-container">
                 <p>I mitt eamensarbeter undersökte jag viktekn av animations- och transition längder i sociala medier på användarupplevelsen (UX). Genom att skapa tre olika versioner av en webbsida med förutbestämda animationslängder genomfördes en studie för att analysera användarnas preferenser och uppfattningar. Den första versionen hade ingen animation (transition: 0s), den andra hade en balanserad animationslängd baserad på designerens val (transition: 0.3s), och den tredje hade en överdrivet långsam animationslängd (transition: 5s). Deltagare bads att använda och utvärdera de olika versionerna av webbsidan och sedan svara på frågor.</p> <!--Skriv text om ditt examensarbete och lägg in-->
                 <p>Resultaten av studien visade att majoriteten av deltagarna föredrog den balanserade versionen med designerbestämda animationslängder. Intressant nog uppfattade deltagarna den version utan animationer som tekniskt snabbast, trots att den tekniskt sett hade samma hastighet som de andra versionerna.</p>
                 <!--Länka Github repot för examensarbete i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
@@ -184,6 +197,8 @@
                 <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
 
             </div>
+
+
         </div>
         <br>
         <div class="line"></div>
