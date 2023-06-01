@@ -530,5 +530,11 @@ h2 {
   .modal-content {
     width: 90%;
   }
+  .container-width {
+    width: 95%;
+  }
+  #about-box {
+    width: 80%;
+  }
 }
 
