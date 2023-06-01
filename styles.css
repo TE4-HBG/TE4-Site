@@ -22,7 +22,8 @@ body {
   /*  display: flex;
   justify-content: center;
   align-items: center;*/
-  background-image: url("images/te4-working.png");
+  background-image: url("images/te4-working.png"),
+  linear-gradient(34deg, #4B0082 1%, #B1068C 56%);
   background-position: center top;
 }
 
@@ -84,6 +85,10 @@ h2 {
 
 .link-icon {
   height: 14px;
+}
+
+.github-icon {
+  height: 18px;
 }
 
 /*projekt section-------*/

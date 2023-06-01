@@ -44,6 +44,10 @@ body {
   box-shadow: 0px 0px 15px grey;
 }
 
+.video-container {
+  width: 100%;
+}
+
 .project-video {
   border-radius: 1rem;
   width: 100%;
@@ -100,6 +104,10 @@ body {
     height: 100%;
     margin-right: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .video-container div {
+    width: 100%;
   }
 
   .project-container {
