@@ -27,3 +27,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function LarsNilsFunction(x) {
+  x.classList.toggle("change");
+}
