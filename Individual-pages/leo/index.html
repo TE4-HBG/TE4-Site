@@ -160,9 +160,19 @@
 
         transition: background-color 2s;
       }
-      @media screen and (width <= 40rem) {
+      @media screen and (width <= 31rem) {
         .cool-text {
           font-size: 1.9em !important;
+        }
+      }
+      @media screen and (width <= 26rem) {
+        .cool-text {
+          font-size: 1.5em !important;
+        }
+      }
+      @media screen and (width <= 20em) {
+        .cool-text {
+          font-size: 1.3em !important;
         }
       }
       .cool-text::before {
@@ -375,7 +385,93 @@
     </div>
     -->
     <div id="background-blur" class="blurrer"></div>
-    <div class="project-container">
+    <nav class="navbar center-y-axis background">
+      <a
+        href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/"
+        class="inherit-height"
+      >
+        <div class="switcharooer">
+          <img
+            data-lazyloaded="1"
+            src="../../images/nti.svg"
+            data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg"
+          />
+          <img
+            class="lack-of-rizz"
+            data-lazyloaded="1"
+            src="nti-white.svg"
+            data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg"
+          />
+        </div>
+      </a>
+      <div class="navbar-link-div">
+        <div class="switcharooer">
+          <a href="../../index.html" class="navbar-link">Projekt</a>
+          <a href="../../index.html" class="navbar-link lack-of-rizz whiter"
+            >Projekt</a
+          >
+        </div>
+        <div class="switcharooer">
+          <a href="../../index.html#about" class="navbar-link">Om Te4</a>
+          <a
+            href="../../index.html#about"
+            class="navbar-link lack-of-rizz whiter"
+          >
+            Om Te4
+          </a>
+        </div>
+        <div class="switcharooer">
+          <a href="../../index.html#elever" class="navbar-link">Elever</a
+          ><a
+            href="../../index.html#elever"
+            class="navbar-link lack-of-rizz whiter"
+          >
+            Elever
+          </a>
+        </div>
+        <div class="switcharooer">
+          <a href="../../index.html#teachers" class="navbar-link">Handledare</a
+          ><a
+            href="../../index.html#teachers"
+            class="navbar-link lack-of-rizz whiter"
+          >
+            Handledare
+          </a>
+        </div>
+      </div>
+      <a
+        href="https://www.linkedin.com/company/te-4-nti-gymnasiet-helsingborg/"
+        class="linkedIn-logo"
+      >
+        <img src="../../images/linkedIn-logo.png" class="inherit-height" />
+      </a>
+    </nav>
+    <div class="hamburger-container">
+      <nav class="hamburger">
+        <a
+          href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/"
+          class="inherit-height"
+        >
+          <img
+            data-lazyloaded="1"
+            src="../../images/nti.svg"
+            data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg"
+          />
+        </a>
+        <div class="container-hamburger-icon" onclick="LarsNilsFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+      <div id="hamburger-items-container">
+        <a href="../../index.html" class="navbar-link">Projekt</a>
+        <a href="../../index.html#about" class="navbar-link">Om Te4</a>
+        <a href="../../index.html#elever" class="navbar-link">Elever</a>
+        <a href="../../index.html#teachers" class="navbar-link">Handledare</a>
+      </div>
+    </div>
+    <div class="project-container background">
       <div class="switcharooer">
         <h1 class="cool-text"></h1>
         <h1 class="rainbow-text cool-text lack-of-rizz"></h1>
@@ -410,7 +506,10 @@
         
         document.getElementById('background-blur').classList.add('background-blur-anim' )
 
-        classlist = document.getElementsByClassName('project-container').item(0).classList.add('background-anim')
+        const backgrounds = document.getElementsByClassName('background');
+        for (let i = 0; i < backgrounds.length; i++) {
+          backgrounds.item(i).classList.add('background-anim')
+        }
 
         const switcharooers = document.getElementsByClassName('switcharooer')
 
@@ -433,13 +532,10 @@
       }
       "
         ></div>
-        <!--Rätt bild (../images/)-->
         <div class="switcharooer">
           <h3>Jag gillar att skapa.</h3>
           <h3 class="whiter lack-of-rizz">Jag gillar att skapa.</h3>
         </div>
-
-        <!--Skriv en kort text om dig och lägg in-->
       </div>
 
       <div class="switcharooer">
@@ -452,12 +548,10 @@
       </div>
       <div class="project-contributions-container">
         <a href="../../Projects/Project1/papershop.html">
-          <!--Vilket projekt i Project1 mappen-->
           <div>
             <h2>Webbshop</h2>
             <ul>
               <li><h3>Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
             </ul>
           </div>
           <div class="switcharooer project-background">
@@ -475,7 +569,6 @@
             <h2>Infoskärm</h2>
             <ul>
               <li><h3>Backend Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
             </ul>
           </div>
           <div class="switcharooer project-background">
@@ -491,14 +584,11 @@
         </a>
 
         <a href="../../Projects/Project3/rat-on-the-run.html">
-          <!--Vilket projekt i Project3 mappen-->
           <div>
             <h2>Rat on the run</h2>
             <ul>
               <li><h3>GruppLedare</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
               <li><h3>Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
             </ul>
           </div>
           <div class="switcharooer project-background">
@@ -512,12 +602,10 @@
         </a>
 
         <a href="../../Projects/Project4/nobelpriser.html">
-          <!--Vilket projekt i Project4 mappen-->
           <div>
             <h2>Nobelfinder</h2>
             <ul>
               <li><h3>Backend Kodning</h3></li>
-              <!--Vilka var dina roller (Kolla projektsidan och punkta upp)-->
               <li><h3>Frontend Styling</h3></li>
               <li><h3>API-hantering</h3></li>
             </ul>
@@ -610,7 +698,6 @@
               kom på för några år sen.
             </h3>
           </div>
-          <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
           <p>
             <a href="" class="link" target="_blank"> Rapport </a>
           </p>
@@ -656,7 +743,6 @@
       </div>
 
       <div style="display: flex">
-        <!--Länka till din linkedIn profil-->
         <a
           href="https://www.linkedin.com/in/leo-kordelin-%C3%B6hlander-0321b1249/"
           target="_blank"
@@ -681,7 +767,6 @@
             />
           </a>
         </div>
-        <!--Länka till ditt privata github konto-->
       </div>
     </div>
   </body>
