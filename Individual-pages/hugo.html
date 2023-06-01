@@ -13,6 +13,22 @@
 </head>
 
 <body>
+    <style>
+        .exam-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06)
+        }
+        @media screen and (width: 700px) { /*funkar inte*/
+            .exam-img {
+                width: 90%;
+            }
+          }
+    </style>
+
+
+
     <div class="project-container">
         <h1>Hugo Sjöholm</h1> <!--Ditt namn (För och efternamn)-->
 
@@ -123,19 +139,17 @@
         <div class="line"></div>
         <h2>Examensarbete</h2>
         <div class="video-container">
-            <video controls autoplay class="project-video">
-                <source src="" type="video/mp4"> <!--Lägg in video från ditt projekt i examensarbete-videos mappen och länka till den-->
-                Your browser does not support the video tag.
-            </video>
+            <img class="exam-img" src="../images/hugo-exam.gif" alt="A animated GIF showing the site with baanced animations described in the text">
             <div>
-                <p>Text om examensarbete...</p> <!--Skriv text om ditt examensarbete och lägg in-->
+                <p>I mitt eamensarbeter undersökte jag viktekn av animations- och transition längder i sociala medier på användarupplevelsen (UX). Genom att skapa tre olika versioner av en webbsida med förutbestämda animationslängder genomfördes en studie för att analysera användarnas preferenser och uppfattningar. Den första versionen hade ingen animation (transition: 0s), den andra hade en balanserad animationslängd baserad på designerens val (transition: 0.3s), och den tredje hade en överdrivet långsam animationslängd (transition: 5s). Deltagare bads att använda och utvärdera de olika versionerna av webbsidan och sedan svara på frågor.</p> <!--Skriv text om ditt examensarbete och lägg in-->
+                <p>Resultaten av studien visade att majoriteten av deltagarna föredrog den balanserade versionen med designerbestämda animationslängder. Intressant nog uppfattade deltagarna den version utan animationer som tekniskt snabbast, trots att den tekniskt sett hade samma hastighet som de andra versionerna.</p>
                 <!--Länka Github repot för examensarbete i href (Finns inget repo, skapa ett eller ta bort hela p-tagen)-->
-                <p><a href="" class="link" target="_blank"><img src="../images/github-icon.png" class="github-icon" /> Github <img src="../images/link-icon.png" class="link-icon" /></a></p>
+                <p><a href="https://github.com/HugoSjoholm/Examensarbete2" class="link" target="_blank"><img src="../images/github-icon.png" class="github-icon" /> Github <img src="../images/link-icon.png" class="link-icon" /></a></p>
                 <!--Länka din rapport i href genom att gå in på din rapport > dela > kopiera länk -->
 
             </div>
         </div>
-
+        <br>
         <div class="line"></div>
         <p>Kontakta mig gärna på linkedin eller kika på några av mina projekt på github!</p>
         <div>
