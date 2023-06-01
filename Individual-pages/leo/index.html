@@ -160,6 +160,11 @@
 
         transition: background-color 2s;
       }
+      @media screen and (width <= 40rem) {
+        .cool-text {
+          font-size: 1.9em !important;
+        }
+      }
       .cool-text::before {
         white-space: pre;
         content: "Leo Kordelin Öhlander";
@@ -170,6 +175,7 @@
         animation-play-state: paused;
         animation-fill-mode: forwards;
       }
+
       .rainbow-div {
         background: var(--rainbow);
         background-size: 25% 100%;
