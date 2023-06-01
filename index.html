@@ -32,19 +32,28 @@
         <img src="images/linkedIn-logo.png" class="inherit-height" />
       </a>
     </nav>
-    <nav class="hamburger">
-      <a href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/"
-        class="inherit-height">
-        <img data-lazyloaded="1" src="images/nti.svg"
-          data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg">
-      </a>
-      <div class="container-hamburger" onclick="LarsNilsFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+    <div class="hamburger-container">
+      <nav class="hamburger">
+        <a href="https://ntigymnasiet.se/helsingborg/program/gymnasieingenjorsprogrammet/mjukvarudesign/"
+          class="inherit-height">
+          <img data-lazyloaded="1" src="images/nti.svg"
+            data-src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti-logo-black.svg">
+        </a>
+        <div class="container-hamburger-icon" onclick="LarsNilsFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+      <div id="hamburger-items-container">
+        <a href="#projekt" class="navbar-link">Projekt</a>
+        <a href="#about" class="navbar-link">Om Te4</a>
+        <a href="#elever" class="navbar-link">Elever</a>
+        <a href="#teachers" class="navbar-link">Handledare</a>
       </div>
-    </nav>
 
+    </div>
+    
     <div id="hero">
       <div>
         <img src="images/te4-logo-light.png" id="headerlogo">
