@@ -141,7 +141,7 @@
         transition: opacity 2s;
       }
       .cool-guy {
-        background-image: url("../../images/Leo.png");
+        background-image: url("../../images/Leo.webp");
         background-size: cover;
         background-position: center;
       }
@@ -188,7 +188,7 @@
 
       .rainbow-div {
         background: var(--rainbow);
-        background-size: 25% 100%;
+        background-size: 25% 100% !important;
         animation: shmove 5s linear infinite;
         opacity: 0;
       }
@@ -407,9 +407,9 @@
       <div class="navbar-link-div">
         <div class="switcharooer">
           <a href="../../index.html" class="navbar-link">Projekt</a>
-          <a href="../../index.html" class="navbar-link lack-of-rizz whiter"
-            >Projekt</a
-          >
+          <a href="../../index.html" class="navbar-link lack-of-rizz whiter">
+            Projekt
+          </a>
         </div>
         <div class="switcharooer">
           <a href="../../index.html#about" class="navbar-link">Om Te4</a>
@@ -421,8 +421,8 @@
           </a>
         </div>
         <div class="switcharooer">
-          <a href="../../index.html#elever" class="navbar-link">Elever</a
-          ><a
+          <a href="../../index.html#elever" class="navbar-link">Elever</a>
+          <a
             href="../../index.html#elever"
             class="navbar-link lack-of-rizz whiter"
           >
@@ -430,8 +430,8 @@
           </a>
         </div>
         <div class="switcharooer">
-          <a href="../../index.html#teachers" class="navbar-link">Handledare</a
-          ><a
+          <a href="../../index.html#teachers" class="navbar-link">Handledare</a>
+          <a
             href="../../index.html#teachers"
             class="navbar-link lack-of-rizz whiter"
           >
@@ -476,9 +476,6 @@
         <h1 class="cool-text"></h1>
         <h1 class="rainbow-text cool-text lack-of-rizz"></h1>
       </div>
-
-      <!--Ditt namn (För och efternamn)-->
-
       <div class="switcharooer">
         <div class="line"></div>
         <div class="line rainbow-div lack-of-rizz" disabled></div>
@@ -490,7 +487,7 @@
       <div class="about-container">
         <div
           id="activator"
-          src="../../images/Leo.png"
+          src="../../images/Leo.webp"
           class="portrait pointer cool-guy"
           onclick="
       if (!activated) {
@@ -559,7 +556,9 @@
               class="project-background shop"
               style="opacity: 1 !important"
             ></div>
-            <div class="project-background shop rainbow-div lack-of-rizz"></div>
+            <div
+              class="project-background shop rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
@@ -577,7 +576,7 @@
               style="opacity: 1 !important"
             ></div>
             <div
-              class="project-background infoscreen rainbow-div lack-of-rizz"
+              class="project-background infoscreen rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
@@ -596,7 +595,9 @@
               class="project-background game"
               style="opacity: 1 !important"
             ></div>
-            <div class="project-background game rainbow-div lack-of-rizz"></div>
+            <div
+              class="project-background game rainbow-div small lack-of-rizz"
+            ></div>
           </div>
           <div class="blurrer"></div>
         </a>
@@ -616,7 +617,7 @@
               style="opacity: 1 !important"
             ></div>
             <div
-              class="project-background react rainbow-div lack-of-rizz"
+              class="project-background react rainbow-div small lack-of-rizz"
             ></div>
           </div>
           <div class="blurrer"></div>
