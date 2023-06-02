@@ -1,3 +1,9 @@
+:root {
+  --pink-ac: #ab058b;
+  --indigo-ac: indigo;
+  --bg-ac: #f6f6f6;
+}
+
 html {
   min-height: 100%;
 }
@@ -6,12 +12,12 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("../images/te4-outside.png"),
-  linear-gradient(34deg, #4B0082 1%, #B1068C 56%);
+    linear-gradient(34deg, #4b0082 1%, #b1068c 56%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Poppins, sans-serif;
-  padding-top: 2rem;
+  
   padding-bottom: 4rem;
 }
 
@@ -22,10 +28,22 @@ body {
   background-color: white;
   padding: 1.2rem;
   border-radius: 1rem;
+  margin-top: 8rem;
 }
 
 .project-container h1 {
   font-size: 2.3em;
+}
+
+.blurrer {
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(0.3rem) invert(0%) hue-rotate(0deg) saturate(1)
+    brightness(1);
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+  height: 100vh;
 }
 
 .line {
@@ -37,6 +55,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.about-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.about-container > * {
+  width: 100%;
+}
+
 .portrait {
   aspect-ratio: 3/4;
   width: 30%;
@@ -46,11 +74,6 @@ body {
   box-shadow: 0px 0px 15px grey;
   margin-bottom: 1rem;
   margin-right: 1rem;
-}
-
-.about-container {
-  display: flex;
-  justify-content: start;
 }
 
 .project-image {
@@ -168,19 +191,29 @@ body {
 }
 
 .project-background.shop {
-  background-image: url("../images/cart.jpg");
+  background: url("../images/cart.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.infoscreen {
-  background-image: url("../images/infoscreen.jpg");
+  background: url("../images/infoscreen.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.game {
-  background-image: url("../images/spel.jpg");
+  background: url("../images/spel.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.react {
-  background-image: url("../images/react.jpg");
+  background: url("../images/react.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-background.te4-site {
-  background-image: url("../images/te4-working.png");
+  background: url("../images/te4-working.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .contact-link {
@@ -197,8 +230,13 @@ body {
 @media screen and (min-width: 700px) {
   /* Mellan 700px och 1200px */
   .video-container {
+    width: 100%;
     display: flex;
     justify-content: start;
+  }
+
+  .video-container > div {
+    width: 100%;
   }
 
   .presentation-container {
@@ -228,9 +266,185 @@ body {
   }
 }
 
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+}
+.img-container span {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.img-container img {
+  border-radius: 10px;
+  width: 100%;
+  margin: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/*navbar---------------------*/
+.navbar {
+  z-index: 9999;
+  height: 4em;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-link-div {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px transparent solid;
+  transition: 0.2s;
+  font-size: 1.2em;
+}
+
+.navbar-link:hover {
+  border-bottom: 2px black solid;
+}
+
+.linkedIn-logo {
+  display: flex;
+  align-items: center;
+  height: 70%;
+  filter: grayscale(1) contrast(2.8);
+  transition: 100ms;
+}
+.linkedIn-logo:hover {
+  filter: grayscale(0) contrast(1);
+}
+
+.inherit-height {
+  height: inherit;
+  margin-right: -7%;
+}
+
+.center-y-axis {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/*Hamburger Menu----------*/
+.hamburger-container {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+}
+
+.hamburger {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  justify-content: space-between;
+  padding: 20px 30px 20px 20px;
+  background-color: white;
+  align-items: center;
+  z-index: 999;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+#hamburger-items-container {
+  display: none;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 900;
+  background-color: var(--bg-ac);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: -20px;
+  margin-top: -20rem;
+}
+#hamburger-items-container a {
+  display: inherit;
+  padding: 6px;
+}
+.show {
+  display: flex!important;
+}
+.dropped {
+  animation: slideAnimation 100ms ease-in-out forwards;
+}
+
+@keyframes slideAnimation {
+  from {
+    margin-top: -12rem;
+  }
+  to {
+    margin-top: -2px;
+  }
+}
+
+@keyframes slideAnimation {
+  from {
+    margin-top: -12rem;
+  }
+  to {
+    margin-top: -2px;
+  }
+}
+
+
 @media screen and (min-width: 1200px) {
   /* Över 1200px */
   .project-container {
     width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .modal-content {
+    width: 70%;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+
+  }
+  .hamburger-container {
+    display: block;
   }
 }

@@ -27,3 +27,11 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function LarsNilsFunction(x) {
+  x.classList.toggle("change");
+  let dropdown = document.getElementById('hamburger-items-container');
+  dropdown.classList.toggle("show");
+  dropdown.classList.toggle("dropped");
+  
+}
