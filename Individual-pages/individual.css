@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/te4-outside.png"),
+  background-image: url("../images/te4-outside.webp"),
     linear-gradient(34deg, #4b0082 1%, #b1068c 56%);
   background-position: center;
   background-size: cover;
@@ -211,7 +211,7 @@ body {
   background-position: center;
 }
 .project-background.te4-site {
-  background: url("../images/te4-working.png");
+  background: url("../images/te4-working.webp");
   background-size: cover;
   background-position: center;
 }
