@@ -22,7 +22,7 @@ body {
   /*  display: flex;
   justify-content: center;
   align-items: center;*/
-  background-image: url("images/te4-working.png"),
+  background-image: url("images/te4-working.webp"),
   linear-gradient(34deg, #4B0082 1%, #B1068C 56%);
   background-position: center top;
 }
@@ -157,7 +157,7 @@ h2 {
 }
 #about {
   scroll-margin-top: 6em;
-  background: url(images/te4-outside.png);
+  background: url(images/te4-outside.webp);
   background-position: center center;
   padding-bottom: 4rem;
 }
